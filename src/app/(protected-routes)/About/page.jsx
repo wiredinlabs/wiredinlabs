@@ -1,57 +1,86 @@
-// Temporary Page for Developing About Section
-// Just add the reference of About Component in this so that /About can be used to see the About Section
-// Later on add the About Component in the main page
-
 import AboutSection from "@/components/home_components/About/AboutSection";
+import Image from "next/image";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Main Content */}
-      <main className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 gap-8 items-center">
+      <main className="container mx-auto px-8 py-8 relative">
+        <div className="grid grid-cols-2 gap-8 items-center relative">
           {/* Left Column */}
-          <div className="space-y-12">
-            <h1 className="text-6xl font-bold leading-tight">
-              "Unplug the Old,
-              <br />
-              Wire in the New."
-            </h1>
-            
-            <div className="grid grid-cols-2 gap-8">
-              <div className="space-y-4">
-                {/* <Star className="text-yellow-400 w-6 h-6" /> */}
-                <p className="text-sm">
-                  Out with the old wires, in with the new vibes. 
-                  At Wired In, we specialize in cutting the cords 
-                  to outdated tech and sparking fresh, 
+          <div className="space-y-24 relative">
+            {/* Main headings */}
+            <div className="pb-12 relative h-[50vh]">
+              <Image
+                src="/images/title.png"
+                alt="title"
+                layout="fill"
+                className="object-contain"
+              />
+            </div>
+
+            {/* Arrow Image pointing to the hand */}
+            <div className="absolute top-[30%] left-[89%] w-[15vw] h-[15vh]">
+              <Image
+                src="/images/arrow1.png"
+                alt="arrow"
+                layout="fill"
+                className="object-contain"
+              />
+            </div>
+
+            {/* Smaller texts */}
+            <div className="grid grid-cols-2 gap-32 items-center">
+              {/* First Text Block with Image */}
+              <div className="space-y-4 h-full w-[130%]">
+                <div className="flex items-start">
+                  <Image
+                    src="/images/bullet.png"  // Replace with actual image path
+                    alt="Tech Innovation"
+                    width={40}  // Adjust width
+                    height={40} // Adjust height
+                    className="object-contain"
+                  />
+                </div>
+                <p className="font-inter font-light text-md tracking-tighter">
+                  Out with the old wires, in with the new vibes.
+                  At Wired In, we specialize in cutting the cords
+                  to outdated tech and sparking fresh,
                   forward-thinking design and development.
                 </p>
               </div>
-              
-              <div className="space-y-4">
-                {/* <Star className="text-yellow-400 w-6 h-6" /> */}
-                <p className="text-sm">
-                  We turn your digital dreams into reality, 
-                  powering up your business with seamless 
-                  solutions that are built for tomorrow. 
-                  Ready to upgrade to the future?
+
+              {/* Second Text Block with Image */}
+              <div className="space-y-4 h-full w-[130%]">
+                <div className="flex items-start">
+                  <Image
+                    src="/images/bullet.png"  // Replace with actual image path
+                    alt="Future Tech"
+                    width={40}  // Adjust width
+                    height={40} // Adjust height
+                    className="object-contain"
+                  />
+                </div>
+                <p className="font-inter font-light text-md tracking-tighter">
+                  We turn your digital dreams into reality,
+                  powering up your business with seamless
+                  solutions that are built for tomorrow.
+                  <br/>Ready to upgrade to the future?
                 </p>
               </div>
             </div>
           </div>
-          
+
           {/* Right Column - Hand Image */}
-          <div className="relative">
-            <div className="absolute top-0 right-1/4">
-              <div className="text-yellow-400 text-6xl">*</div>
-              <div className="w-16 h-32 border-2 border-yellow-400 rounded-full transform -rotate-45"></div>
+          <div className="relative h-[70vh] w-[130%]">
+            <div className="absolute top-[15%] left-[10%] w-[50vw] h-[70vh]">
+              <Image
+                src="/images/hand.png"
+                alt="hand"
+                layout="fill"
+                className="object-contain"
+              />
             </div>
-            <img 
-              src="/api/placeholder/500/600" 
-              alt="Reaching hand" 
-              className="w-full object-cover grayscale contrast-125"
-            />
           </div>
         </div>
       </main>

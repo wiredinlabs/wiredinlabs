@@ -5,7 +5,7 @@ import NavBar from "@/components/layout_components/NavBar/NavBar";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 
