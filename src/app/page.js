@@ -1,10 +1,13 @@
 import Image from "next/image";
 import About from "./(protected-routes)/About/page";
+import AboutSection from "@/components/home_components/About/AboutSection";
+import ServicesSection from "@/components/home_components/Services/ServicesSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] text-6xl items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      Stay Tuned... 
+    <div className="flex flex-col w-full min-h-screen font-[family-name:var(--font-geist-sans)] mt-[10vh]">
+    <AboutSection />
+    <ServicesSection />
     </div>
   );
 }
