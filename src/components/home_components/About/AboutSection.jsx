@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Ticker from "./Ticker";
 
 // Main About Section Component
 export default function AboutSection() {
@@ -83,6 +84,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
+        <Ticker />
       </main>
     </div>
   );

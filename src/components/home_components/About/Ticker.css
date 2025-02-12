@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+  }
+  
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: 0;
+    height: 3.5rem;
+    background-color: #000;
+    rotate: -10deg;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ticker {
+    display: flex;
+    width: 100%;
+
+  }
+  
+  .ticker-content {
+    display: flex;
+    min-width: 200%;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .item {
+    display: inline-block;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+    font-family: sans-serif;
+    white-space: nowrap;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
