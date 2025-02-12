@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Ticker from "./Ticker";
 
 // Main About Section Component
 export default function AboutSection() {
     return (
-    <div id="about" className="min-h-screen bg-black text-white">
+    <div id="about" className="min-h-[110vh] bg-black text-white">
       {/* Main Content */}
       <main className="container mx-auto px-8 py-8 relative">
         <div className="grid grid-cols-2 gap-8 items-center relative">
@@ -42,7 +43,7 @@ export default function AboutSection() {
                     className="object-contain"
                   />
                 </div>
-                <p className="font-inter font-light text-md tracking-tighter">
+                <p className="font-light text-md tracking-tighter">
                   Out with the old wires, in with the new vibes.
                   At Wired In, we specialize in cutting the cords
                   to outdated tech and sparking fresh,
@@ -61,7 +62,7 @@ export default function AboutSection() {
                     className="object-contain"
                   />
                 </div>
-                <p className="font-inter font-light text-md tracking-tighter">
+                <p className="font-light text-md tracking-tighter">
                   We turn your digital dreams into reality,
                   powering up your business with seamless
                   solutions that are built for tomorrow.
@@ -72,18 +73,17 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column - Hand Image */}
-          <div className="relative h-[70vh] w-[130%]">
-            <div className="absolute top-[15%] left-[10%] w-[50vw] h-[70vh]">
-              <Image
-                src="/images/hand.png"
-                alt="hand"
-                layout="fill"
-                className="object-contain"
-              />
-            </div>
+          <div className="absolute top-[15%] left-[60%] w-[40vw] h-[80vh] overflow-hidden">
+            <Image
+              src="/images/hand copy.png"
+              alt="hand"
+              layout="fill"
+              className="object-contain"
+            />
           </div>
         </div>
       </main>
+      <Ticker/>
     </div>
   );
 }
