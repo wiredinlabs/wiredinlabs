@@ -49,7 +49,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`text-black h-[17vh] w-full flex justify-between bg-black items-center px-20 py-1 fixed top-0 shadow-md z-50 transition-transform duration-500 ${
+      className={`text-black h-[17vh] w-full flex justify-between bg-black items-center px-20 py-1 fixed top-0 shadow-md z-50 transition-transform duration-1000 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -89,10 +89,10 @@ const NavBar = () => {
 
       {/* Contact Button */}
       <div
-        className="flex justify-center items-center text-black bg-[#E4ED05] border-2 border-black rounded-3xl px-4 py-2 text-xl font-medium cursor-pointer 
-    hover:bg-black hover:border-[#E4ED05] hover:text-white transition-all duration-500"
+        className="flex justify-center items-center text-black bg-[#E4ED05] border-2  rounded-3xl px-4 py-1 text-xl font-medium cursor-pointer 
+    hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500 shadow-[0_0_10px_rgba(0,0,0,0.5)] shadow-[#E4ED05]"
       >
-        Contact
+        Contact Us
       </div>
     </div>
   );
