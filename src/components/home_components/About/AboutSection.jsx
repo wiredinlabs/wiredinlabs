@@ -73,7 +73,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column - Hand Image */}
-          <div className="absolute top-[13%] left-[60%] w-[40vw] h-[80vh] overflow-hidden">
+          <div className="absolute top-[15%] left-[60%] w-[40vw] h-[80vh] overflow-hidden">
             <Image
               src="/images/hand copy.png"
               alt="hand"
