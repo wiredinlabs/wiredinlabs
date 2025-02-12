@@ -3,11 +3,24 @@ import "./Ticker.css"; // Ensure you create this CSS file for styling
 
 const Ticker = () => {
   return (
-    <div className="ticker-wrap">
+    <div className="ticker-wrap mt-28">
       <div className="ticker">
         <div className="ticker-content">
           {[...Array(8)].map((_, index) => (
-            <span className="item" key={index}>Frontend <span className="text-[#E4ED05]">&</span> Design <span className="text-[#E4ED05]">&</span> Revamp <span className="text-[#E4ED05]">&</span> Development <span className="text-[#E4ED05]">&</span> Audit <span className="text-[#E4ED05]">&</span> Branding <span className="text-[#E4ED05]">& </span></span>
+              <span className="item px-16" key={index}>
+                frontend
+                <span className="text-[#E4ED05] px-16 font-light">&</span>
+                design
+                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                revamp
+                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                development
+                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                audit
+                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                branding
+                <span className="text-[#E4ED05] px-16 font-light">& </span>
+            </span>
           ))}
         </div>
       </div>

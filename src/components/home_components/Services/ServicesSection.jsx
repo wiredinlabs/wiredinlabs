@@ -86,16 +86,16 @@ const ServicesSection = () => {
           </div>
           {/* Services list */}
           <div className="flex flex-col justify-center min-h-[85vh] py-16 px-12">
-            <div className="flex flex-col items-end gap-[40px] ">
+            <div className="flex flex-col items-end gap-[70px]">
               {services.map((service, index) => (
                 <div
                   key={index}
                   className={`
-                    text-[80px] leading-none font-bold transition-all duration-300 relative
+                    leading-none font-bold transition-all duration-300 relative
                     ${
                       activeService === service
-                        ? "text-black scale-100 opacity-100"
-                        : "text-black/30 scale-95 opacity-70"
+                        ? "text-black text-[100px] font-bold tracking-tighter opacity-100"
+                        : "text-black/30 text-[70px] font-bold tracking-tighter opacity-70"
                     }
                   `}
                 >

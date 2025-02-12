@@ -9,7 +9,7 @@ body {
     bottom: 0;
     height: 3.5rem;
     background-color: #000;
-    rotate: -10deg;
+    rotate: -5deg;
     display: flex;
     align-items: center;
   }
@@ -24,6 +24,8 @@ body {
     display: flex;
     min-width: 200%;
     animation: marquee 10s linear infinite;
+    border-top: white 2px solid;
+    border-bottom: white 2px solid;
   }
   
   .item {
@@ -31,9 +33,9 @@ body {
     padding: 0 1rem;
     font-size: 2rem;
     color: white;
-    font-weight: 800;
     font-family: sans-serif;
     white-space: nowrap;
+    font-weight: 300;
   }
   
   @keyframes marquee {
