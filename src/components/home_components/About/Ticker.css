@@ -26,6 +26,7 @@ body {
     animation: marquee 10s linear infinite;
     border-top: white 2px solid;
     border-bottom: white 2px solid;
+    
   }
   
   .item {
@@ -35,7 +36,7 @@ body {
     color: white;
     font-family: sans-serif;
     white-space: nowrap;
-    font-weight: 300;
+    font-weight: 500;
   }
   
   @keyframes marquee {

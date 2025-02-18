@@ -115,8 +115,8 @@ const NavBar = () => {
       {/* Contact Button */}
       <Link href="/#contact">
         <div
-          className="flex justify-center items-center text-black bg-[#E4ED05] border-2  rounded-3xl px-4 py-1 text-xl font-medium cursor-pointer 
-    hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500 shadow-[0_0_10px_rgba(0,0,0,0.5)] shadow-[#E4ED05]"
+          className="flex justify-center items-center text-black bg-[#E4ED05] border-[3px] px-[12px] py-1 text-xl font-medium cursor-pointer 
+    hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500 "
         >
           Contact Us
         </div>
