@@ -15,15 +15,26 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const servicesSection = document.getElementById("services");
+      const worksSection = document.getElementById("works");
 
       if (servicesSection) {
         const servicesRect = servicesSection.getBoundingClientRect();
+        const worksRect = worksSection.getBoundingClientRect();
         const sectionHeight = servicesRect.height;
-        const visibleHeight = Math.min(window.innerHeight - servicesRect.top, sectionHeight);
+        const visibleHeight = Math.min(
+          window.innerHeight - servicesRect.top,
+          sectionHeight
+        );
         const visiblePercentage = (visibleHeight / sectionHeight) * 100;
 
         // Hide navbar when services section is 50% or more visible
-        if (visiblePercentage >= 50 && servicesRect.top <= window.innerHeight) {
+        console.log("services hiding", servicesRect);
+        console.log("works hiding", worksRect);
+        if (
+          worksRect.top > 0 &&
+          visiblePercentage >= 50 &&
+          servicesRect.top <= window.innerHeight
+        ) {
           setIsVisible(false);
         } else {
           // Only show navbar when scrolling up and not in services section
@@ -42,6 +53,7 @@ const NavBar = () => {
         { id: "/", ref: document.getElementById("about") },
         { id: "#services", ref: document.getElementById("services") },
         { id: "#works", ref: document.getElementById("works") },
+        { id: "#contact", ref: document.getElementById("contact") },
         { id: "/blog", ref: document.getElementById("blog") },
       ];
 
@@ -101,12 +113,14 @@ const NavBar = () => {
       </div>
 
       {/* Contact Button */}
-      <div
-        className="flex justify-center items-center text-black bg-[#E4ED05] border-2  rounded-3xl px-4 py-1 text-xl font-medium cursor-pointer 
+      <Link href="/#contact">
+        <div
+          className="flex justify-center items-center text-black bg-[#E4ED05] border-2  rounded-3xl px-4 py-1 text-xl font-medium cursor-pointer 
     hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500 shadow-[0_0_10px_rgba(0,0,0,0.5)] shadow-[#E4ED05]"
-      >
-        Contact Us
-      </div>
+        >
+          Contact Us
+        </div>
+      </Link>
     </div>
   );
 };

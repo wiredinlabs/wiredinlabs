@@ -1,5 +1,5 @@
 import React from "react";
-import "./Ticker.css"; // Ensure you create this CSS file for styling
+import "./Ticker.css"; 
 
 const Ticker = () => {
   return (
