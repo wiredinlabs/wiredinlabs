@@ -1,5 +1,5 @@
 import React from "react";
-import "./Ticker.css"; // Ensure you create this CSS file for styling
+import "./Ticker.css"; 
 
 const Ticker = () => {
   return (
@@ -9,17 +9,17 @@ const Ticker = () => {
           {[...Array(8)].map((_, index) => (
               <span className="item px-16" key={index}>
                 frontend
-                <span className="text-[#E4ED05] px-16 font-light">&</span>
+                <span className="text-[#E4ED05] px-16">&</span>
                 design
-                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                <span className="text-[#E4ED05] px-16">&</span> 
                 revamp
-                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                <span className="text-[#E4ED05] px-16">&</span> 
                 development
-                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                <span className="text-[#E4ED05] px-16">&</span> 
                 audit
-                <span className="text-[#E4ED05] px-16 font-light">&</span> 
+                <span className="text-[#E4ED05] px-16">&</span> 
                 branding
-                <span className="text-[#E4ED05] px-16 font-light">& </span>
+                <span className="text-[#E4ED05] px-16">& </span>
             </span>
           ))}
         </div>
