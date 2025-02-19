@@ -1,9 +1,48 @@
-import React from "react";
-import "./Contact.css"; 
+"use client";
+import React, { useRef, useState } from "react";
+import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 const ContactUsSection = () => {
+  const formRef = useRef(null);
+  //use state for email and name
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
+
+  const sendEmail = async (e) => {
+    e.preventDefault(); // Prevent page reload
+    console.log("Sending email...",formRef.current);
+    console.log("Sending email...",formData);
+
+    try {
+      const response = await emailjs.sendForm(
+        "service_0hfhjym", // Your EmailJS Service ID
+        "template_effqyo2", // Your EmailJS Template ID
+        formRef.current, // Correctly pass the form reference
+        "lYy5cfwUpuKFhKMZ4" // Your Public Key
+      );
+      console.log("Email sent successfully:", response.text);
+      alert("Email sent successfully!");
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      alert("Failed to send email. Please try again.");
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value, // Update the field dynamically
+    }));
+  };
   return (
-    <div id="contact" className="min-h-screen bg-[#E4ED05] text-black flex flex-col justify-between">
+    <div
+      id="contact"
+      className="min-h-screen bg-[#E4ED05] text-black flex flex-col justify-between"
+    >
       <div className="flex flex-col px-9 py-6">
         <div className="flex flex-row justify-between items-center">
           {/* Get in touch with us */}
@@ -102,30 +141,44 @@ const ContactUsSection = () => {
         </div>
         {/* Dashed Line */}
         <div className="dashed-border w-full h-[2px]  mt-14 mb-24" />
-        {/* Name */}
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="[Your Name]"
-          className="text-4xl font-normal bg-transparent w-[40%] border-black  placeholder-black ml-1 focus:outline-none"
-        />
-        {/* Email */}
-        <div className="w-[40%] h-[4px] bg-black mt-1 mb-12" />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="[Your Email]"
-          className="text-4xl font-normal bg-transparent w-[40%] border-black placeholder-black ml-1 focus:outline-none"
-        />
-        <div className="w-[40%] h-[4px] bg-black mt-1" />
-        {/* Send Button */}
-        <div className="w-fit border-[3px] border-black px-3 py-2 text-4xl font-bold mt-8 cursor-pointer hover:bg-black hover:text-[#E4ED05] transition-all duration-500">
-          Send
-        </div>
+        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col items-start">
+      {/* Name */}
+      <input
+        type="text"
+        name="name"
+        placeholder="[Your Name]"
+        value={formData.name}
+        onChange={handleChange}
+        className="text-4xl font-normal bg-transparent w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
+        required
+      />
+      <div className="w-[40%] h-[4px] bg-black mt-1 mb-12" />
+
+      {/* Email */}
+      <input
+        type="email"
+        name="email"
+        placeholder="[Your Email]"
+        value={formData.email}
+        onChange={handleChange}
+        className="text-4xl font-normal bg-transparent w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
+        required
+      />
+      <div className="w-[40%] h-[4px] bg-black mt-1" />
+
+      {/* Send Button */}
+      <button
+        type="submit"
+        className="w-fit border-[3px] border-black px-3 py-2 text-4xl font-bold mt-8 cursor-pointer hover:bg-black hover:text-[#E4ED05] transition-all duration-500"
+      >
+        Send
+      </button>
+    </form>
       </div>
-      <div className="self-center mb-4">2025 © Wired-In Labs. | <span className="cursor-pointer">Terms & Policies</span></div>
+      <div className="self-center mb-4">
+        2025 © Wired-In Labs. |{" "}
+        <span className="cursor-pointer">Terms & Policies</span>
+      </div>
     </div>
   );
 };
