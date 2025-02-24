@@ -1,0 +1,25 @@
+.swiper {
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+
+  padding: 30px 15px !important;
+
+}
+.swiper-css-mode > .swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-scrollbar {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s !important;
+}
+
+.swiper {
+  scrollbar-width: none!important; /* Firefox */
+  -ms-overflow-style: none!important; /* IE/Edge */
+}
+
+.swiper::-webkit-scrollbar {
+  display: none!important; /* Chrome, Safari */
+}
