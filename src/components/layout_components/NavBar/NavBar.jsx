@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AnimatedCircle from "./_navbar_components/AnimatedCircle";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("/");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +19,7 @@ const NavBar = () => {
       const servicesSection = document.getElementById("services");
       const worksSection = document.getElementById("works");
 
-      if (servicesSection) {
+      if (servicesSection && worksSection) {
         const servicesRect = servicesSection.getBoundingClientRect();
         const worksRect = worksSection.getBoundingClientRect();
         const sectionHeight = servicesRect.height;
@@ -27,9 +29,6 @@ const NavBar = () => {
         );
         const visiblePercentage = (visibleHeight / sectionHeight) * 100;
 
-        // Hide navbar when services section is 50% or more visible
-        console.log("services hiding", servicesRect);
-        console.log("works hiding", worksRect);
         if (
           worksRect.top > 0 &&
           visiblePercentage >= 50 &&
@@ -37,7 +36,6 @@ const NavBar = () => {
         ) {
           setIsVisible(false);
         } else {
-          // Only show navbar when scrolling up and not in services section
           if (currentScrollY <= lastScrollY || currentScrollY <= 50) {
             setIsVisible(true);
           } else {
@@ -72,56 +70,119 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  return (
-    <div
-      className={`text-black h-[17vh] w-full flex justify-between bg-black items-center px-20 py-1 fixed top-0 shadow-md z-50 transition-transform duration-1000 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      {/* Logo */}
-      <div>
-        <Image
-          src="/images/wired_in_labs_logo.png"
-          alt="wired_in_labs_logo"
-          width={89}
-          height={89}
-        />
-      </div>
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
-      {/* Navigation Routes */}
-      <div className="flex justify-between items-center gap-16">
-        <Link href="/">
-          <AnimatedCircle isActive={activeSection === "/"}>
-            About
-          </AnimatedCircle>
-        </Link>
-        <Link href="/#services">
-          <AnimatedCircle isActive={activeSection === "#services"}>
-            Services
-          </AnimatedCircle>
-        </Link>
-        <Link href="/#works">
-          <AnimatedCircle isActive={activeSection === "#works"}>
-            Works
-          </AnimatedCircle>
-        </Link>
-        <Link href="/blog">
-          <AnimatedCircle isActive={activeSection === "/blog"}>
-            Blog
-          </AnimatedCircle>
-        </Link>
-      </div>
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-      {/* Contact Button */}
-      <Link href="/#contact">
-        <div
-          className="flex justify-center items-center text-black bg-[#E4ED05] border-[3px] px-[12px] py-1 text-xl font-medium cursor-pointer 
-    hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500 "
-        >
-          Contact Us
-        </div>
+  const NavLinks = ({ mobile = false }) => (
+    <>
+      <Link href="/" onClick={mobile ? closeSidebar : undefined}>
+        <AnimatedCircle isActive={activeSection === "/"}>
+          About
+        </AnimatedCircle>
       </Link>
-    </div>
+      <Link href="/#services" onClick={mobile ? closeSidebar : undefined}>
+        <AnimatedCircle isActive={activeSection === "#services"}>
+          Services
+        </AnimatedCircle>
+      </Link>
+      <Link href="/#works" onClick={mobile ? closeSidebar : undefined}>
+        <AnimatedCircle isActive={activeSection === "#works"}>
+          Works
+        </AnimatedCircle>
+      </Link>
+      <Link href="/blog" onClick={mobile ? closeSidebar : undefined}>
+        <AnimatedCircle isActive={activeSection === "/blog"}>
+          Blog
+        </AnimatedCircle>
+      </Link>
+    </>
+  );
+
+  return (
+    <>
+      <div
+        className={`text-black w-full flex justify-between bg-black items-center px-4 md:px-8 lg:px-20 py-1 fixed top-0 shadow-md z-50 transition-transform duration-1000 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="flex items-center justify-between w-full h-[17vh]">
+          {/* Logo Container - Left on desktop, center on mobile */}
+          <div className="md:w-auto w-full flex md:justify-start justify-center">
+            <Image
+              src="/images/wired_in_labs_logo.png"
+              alt="wired_in_labs_logo"
+              width={89}
+              height={89}
+            />
+          </div>
+
+          {/* Navigation Links - hidden on mobile, visible and centered on desktop */}
+          <div className="hidden md:flex justify-center items-center gap-8 lg:gap-16">
+            <NavLinks />
+          </div>
+
+          {/* Contact Button - hidden on mobile, visible on desktop */}
+          <div className="hidden md:flex justify-end">
+            <Link href="/#contact">
+              <div className="flex justify-center items-center text-black bg-[#E4ED05] border-[3px] px-[12px] py-1 text-xl font-medium cursor-pointer hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500">
+                Contact Us
+              </div>
+            </Link>
+          </div>
+
+          {/* Hamburger Menu - visible on mobile, hidden on desktop */}
+          <div className="md:hidden absolute right-4">
+            <button
+              onClick={toggleSidebar}
+              aria-label="Toggle menu"
+              className="text-white focus:outline-none"
+            >
+              <FaBars size={24} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[80%] max-w-xs bg-black z-[60] transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-4">
+            <button
+              onClick={closeSidebar}
+              aria-label="Close menu"
+              className="text-white focus:outline-none"
+            >
+              <FaTimes size={24} />
+            </button>
+          </div>
+          <div className="flex flex-col items-center gap-8 mt-12">
+            <NavLinks mobile={true} />
+            <Link href="/#contact" onClick={closeSidebar}>
+              <div className="flex justify-center items-center text-black bg-[#E4ED05] border-[3px] px-[12px] py-1 text-xl font-medium cursor-pointer hover:bg-black border-[#E4ED05] hover:text-white transition-all duration-500">
+                Contact Us
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay when sidebar is open */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50"
+          onClick={closeSidebar}
+        ></div>
+      )}
+    </>
   );
 };
 
