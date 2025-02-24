@@ -70,13 +70,16 @@ const ServicesSection = () => {
             ${isFullyVisible ? "min-h-screen" : "min-h-[90vh] mt-12"}
             bg-[#E4ED05] text-black relative
             transition-all duration-300 ease-in-out
-            ${isFullyVisible ? "mx-0 rounded-none" : "mx-14 rounded-3xl"}
+            ${isFullyVisible ? "mx-0 rounded-none" : "mx-4 md:mx-8 lg:mx-14 rounded-3xl"}
             flex flex-col justify-center
           `}
         >
-          {/* Star Icon */}
-          <div className="absolute top-8 left-8">
-            <svg viewBox="0 0 177 164" className="w-44 h-44 fill-current">
+          {/* Star Icon - Smaller on small screens, original size on lg+ */}
+          <div className="absolute top-4 md:top-6 lg:top-8 left-4 md:left-6 lg:left-8">
+            <svg 
+              viewBox="0 0 177 164" 
+              className="w-20 h-20 md:w-24 md:h-24 lg:w-44 lg:h-44 fill-current"
+            >
               <path
                 opacity="0.95"
                 d="M80.6 134.8L56.6 163.6L21.4 137.2L46.2 102C50.2 96.4 58.6 96.4 65.4 94.4L62.2 84C55.4 86 48.6 91.2 42.2 88.8L0.200001 73.6L15 32L53.8 44.4C60.2 46.8 62.6 55.2 66.6 60.8L75.8 54.4C71.8 48.8 64.6 43.6 65 36.8L65.8 -2.38419e-05H109.8L111 36.8C111 43.6 104.2 48.8 100.2 54.4L109 60.8C113 55.2 115.4 46.8 122.2 44.4L160.6 32L176.6 73.6L133.8 88.8C127 91.2 120.2 86 113.4 84L110.2 94.4C117 96.4 125.4 96.4 129.8 101.6L156.2 137.2L121 163.6L95.4 134.4C91 129.2 93.4 121.2 93.4 114.4H82.2C82.2 121.2 85 129.2 80.6 134.8Z"
@@ -84,9 +87,10 @@ const ServicesSection = () => {
               />
             </svg>
           </div>
-          {/* Services list */}
-          <div className="flex flex-col justify-center min-h-[85vh] py-16 px-12">
-            <div className="flex flex-col items-end gap-[70px]">
+          
+          {/* Services list - Center on small screens, end-aligned on lg+ */}
+          <div className="flex flex-col justify-center min-h-[60vh] lg:min-h-[85vh] py-8 md:py-12 lg:py-16 px-6 md:px-8 lg:px-12">
+            <div className="flex flex-col items-center lg:items-end gap-16 md:gap-20 lg:gap-[70px]">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -94,17 +98,18 @@ const ServicesSection = () => {
                     leading-none font-bold transition-all duration-300 relative
                     ${
                       activeService === service
-                        ? "text-black text-[100px] font-bold tracking-tighter opacity-100"
-                        : "text-black/30 text-[70px] font-bold tracking-tighter opacity-70"
+                        ? "text-black text-[38px] sm:text-[70px] md:text-[85px] lg:text-[100px] font-bold tracking-tighter opacity-100"
+                        : "text-black/30 text-[30px] sm:text-[40px] md:text-[60px] lg:text-[70px] font-bold tracking-tighter opacity-70 "
                     }
                   `}
                 >
                   {activeService === service && (
-                    <div className="absolute -top-8 -left-12">
+                    <div className="absolute -top-4 md:-top-5 lg:-top-8 -left-6 md:-left-7 lg:-left-12">
                       <svg
-                        width="68"
-                        height="74"
+                        width="48"
+                        height="52"
                         viewBox="0 0 68 74"
+                        className="w-8 h-8 md:w-10 md:h-10 lg:w-16 lg:h-16"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
