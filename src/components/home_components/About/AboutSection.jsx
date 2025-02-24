@@ -3,7 +3,7 @@ import Ticker from "./Ticker";
 
 // Main About Section Component
 export default function AboutSection() {
-    return (
+  return (
     <div id="about" className="min-h-[110vh] bg-black text-white">
       {/* Main Content */}
       <main className="container mx-auto px-8 py-8 relative">
@@ -36,18 +36,17 @@ export default function AboutSection() {
               <div className="space-y-4 h-full w-[130%]">
                 <div className="flex items-start">
                   <Image
-                    src="/images/bullet.png"  // Replace with actual image path
+                    src="/images/bullet.png" // Replace with actual image path
                     alt="Tech Innovation"
-                    width={40}  // Adjust width
+                    width={40} // Adjust width
                     height={40} // Adjust height
                     className="object-contain"
                   />
                 </div>
                 <p className="font-light text-md tracking-tighter">
-                  Out with the old wires, in with the new vibes.
-                  At Wired In, we specialize in cutting the cords
-                  to outdated tech and sparking fresh,
-                  forward-thinking design and development.
+                  Out with the old wires, in with the new vibes. At Wired In, we
+                  specialize in cutting the cords to outdated tech and sparking
+                  fresh, forward-thinking design and development.
                 </p>
               </div>
 
@@ -55,37 +54,35 @@ export default function AboutSection() {
               <div className="space-y-4 h-full w-[130%]">
                 <div className="flex items-start">
                   <Image
-                    src="/images/bullet.png"  // Replace with actual image path
+                    src="/images/bullet.png" // Replace with actual image path
                     alt="Future Tech"
-                    width={40}  // Adjust width
+                    width={40} // Adjust width
                     height={40} // Adjust height
                     className="object-contain"
                   />
                 </div>
                 <p className="font-light text-md tracking-tighter">
-                  We turn your digital dreams into reality,
-                  powering up your business with seamless
-                  solutions that are built for tomorrow.
-                  <br/>Ready to upgrade to the future?
+                  We turn your digital dreams into reality, powering up your
+                  business with seamless solutions that are built for tomorrow.
+                  <br />
+                  Ready to upgrade to the future?
                 </p>
               </div>
             </div>
           </div>
 
           {/* Right Column - Hand Image */}
-          <div className="absolute top-[15%] left-[60%] w-[40vw] h-[80vh] overflow-hidden">
+          <div className="absolute top-[5%] left-[58%] w-[36vw] h-[91vh] overflow-visible">
             <Image
-              src="/images/hand copy.png"
+              src="/images/hand_copy2.png"
               alt="hand"
               layout="fill"
-              className="object-contain"
+              className="object-contain "
             />
           </div>
         </div>
       </main>
-      <Ticker/>
+      <Ticker />
     </div>
   );
 }
-
-  
