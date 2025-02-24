@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 
 const ContactUsSection = () => {
   const formRef = useRef(null);
-  //use state for email and name
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,8 +12,8 @@ const ContactUsSection = () => {
 
   const sendEmail = async (e) => {
     e.preventDefault(); // Prevent page reload
-    console.log("Sending email...",formRef.current);
-    console.log("Sending email...",formData);
+    console.log("Sending email...", formRef.current);
+    console.log("Sending email...", formData);
 
     try {
       const response = await emailjs.sendForm(
@@ -38,23 +37,24 @@ const ContactUsSection = () => {
       [name]: value, // Update the field dynamically
     }));
   };
+  
   return (
     <div
       id="contact"
-      className="min-h-screen bg-[#E4ED05] text-black flex flex-col justify-between"
+      className="min-h-[83vh] bg-[#E4ED05] text-black flex flex-col justify-between"
     >
-      <div className="flex flex-col px-9 py-6">
+      <div className="flex flex-col px-4 sm:px-6 md:px-9 py-6 ">
         <div className="flex flex-row justify-between items-center">
           {/* Get in touch with us */}
-          <div className="space-y-0">
-            <h1 className="text-8xl font-bold leading-none">Get in touch</h1>
-            <div className="inline-flex gap-6 text-8xl font-bold relative">
+          <div className="space-y-0  mb-0 self-center">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold leading-none">Get in touch</h1>
+            <div className="inline-flex gap-2 sm:gap-4 md:gap-6 text-4xl sm:text-6xl md:text-8xl font-bold relative">
               with us
               <svg
                 viewBox="0 0 57 55"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[57px] h-[55px] absolute top-7 left-[105%]"
+                className="w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[57px] md:h-[55px] absolute top-2 sm:top-4 md:top-7 left-[105%]"
               >
                 <g clipPath="url(#clip0_178_151)">
                   <path
@@ -131,7 +131,10 @@ const ContactUsSection = () => {
             </div>
           </div>
           {/* Star */}
-          <svg viewBox="0 0 177 164" className="w-44 h-44 fill-current">
+          <svg 
+              viewBox="0 0 177 164" 
+              className="w-20 h-20 md:w-24 md:h-24 lg:w-44 lg:h-44 fill-current"
+            >
             <path
               opacity="0.95"
               d="M80.6 134.8L56.6 163.6L21.4 137.2L46.2 102C50.2 96.4 58.6 96.4 65.4 94.4L62.2 84C55.4 86 48.6 91.2 42.2 88.8L0.200001 73.6L15 32L53.8 44.4C60.2 46.8 62.6 55.2 66.6 60.8L75.8 54.4C71.8 48.8 64.6 43.6 65 36.8L65.8 -2.38419e-05H109.8L111 36.8C111 43.6 104.2 48.8 100.2 54.4L109 60.8C113 55.2 115.4 46.8 122.2 44.4L160.6 32L176.6 73.6L133.8 88.8C127 91.2 120.2 86 113.4 84L110.2 94.4C117 96.4 125.4 96.4 129.8 101.6L156.2 137.2L121 163.6L95.4 134.4C91 129.2 93.4 121.2 93.4 114.4H82.2C82.2 121.2 85 129.2 80.6 134.8Z"
@@ -140,42 +143,42 @@ const ContactUsSection = () => {
           </svg>
         </div>
         {/* Dashed Line */}
-        <div className="dashed-border w-full h-[2px]  mt-14 mb-24" />
-        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col items-start">
-      {/* Name */}
-      <input
-        type="text"
-        name="name"
-        placeholder="[Your Name]"
-        value={formData.name}
-        onChange={handleChange}
-        className="text-4xl font-normal bg-transparent w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
-        required
-      />
-      <div className="w-[40%] h-[4px] bg-black mt-1 mb-12" />
+        <div className="dashed-border w-full h-[2px] mt-8 sm:mt-10 md:mt-14 mb-12 sm:mb-16 md:mb-24" />
+        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col items-start w-full">
+          {/* Name */}
+          <input
+            type="text"
+            name="name"
+            placeholder="[Your Name]"
+            value={formData.name}
+            onChange={handleChange}
+            className="text-2xl sm:text-3xl md:text-4xl font-normal bg-transparent w-full sm:w-3/4 md:w-[60%] lg:w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
+            required
+          />
+          <div className="w-full sm:w-3/4 md:w-[60%] lg:w-[40%] h-[4px] bg-black mt-1 mb-8 sm:mb-10 md:mb-12" />
 
-      {/* Email */}
-      <input
-        type="email"
-        name="email"
-        placeholder="[Your Email]"
-        value={formData.email}
-        onChange={handleChange}
-        className="text-4xl font-normal bg-transparent w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
-        required
-      />
-      <div className="w-[40%] h-[4px] bg-black mt-1" />
+          {/* Email */}
+          <input
+            type="email"
+            name="email"
+            placeholder="[Your Email]"
+            value={formData.email}
+            onChange={handleChange}
+            className="text-2xl sm:text-3xl md:text-4xl font-normal bg-transparent w-full sm:w-3/4 md:w-[60%] lg:w-[40%] border-black placeholder-black ml-1 focus:outline-none focus:placeholder-[#E4ED05]"
+            required
+          />
+          <div className="w-full sm:w-3/4 md:w-[60%] lg:w-[40%] h-[4px] bg-black mt-1" />
 
-      {/* Send Button */}
-      <button
-        type="submit"
-        className="w-fit border-[3px] border-black px-3 py-2 text-4xl font-bold mt-8 cursor-pointer hover:bg-black hover:text-[#E4ED05] transition-all duration-500"
-      >
-        Send
-      </button>
-    </form>
+          {/* Send Button */}
+          <button
+            type="submit"
+            className="w-fit border-[3px] border-black px-3 py-2 text-2xl sm:text-3xl md:text-4xl font-bold mt-8 cursor-pointer hover:bg-black hover:text-[#E4ED05] transition-all duration-500"
+          >
+            Send
+          </button>
+        </form>
       </div>
-      <div className="self-center mb-4">
+      <div className="self-center mb-4 text-sm sm:text-base text-center px-4">
         2025 © Wired-In Labs. |{" "}
         <span className="cursor-pointer">Terms & Policies</span>
       </div>

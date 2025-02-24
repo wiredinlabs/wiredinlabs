@@ -90,7 +90,7 @@ const ServicesSection = () => {
           
           {/* Services list - Center on small screens, end-aligned on lg+ */}
           <div className="flex flex-col justify-center min-h-[60vh] lg:min-h-[85vh] py-8 md:py-12 lg:py-16 px-6 md:px-8 lg:px-12">
-            <div className="flex flex-col items-center lg:items-end gap-6 md:gap-8 lg:gap-[70px]">
+            <div className="flex flex-col items-center lg:items-end gap-16 md:gap-20 lg:gap-[70px]">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -98,7 +98,7 @@ const ServicesSection = () => {
                     leading-none font-bold transition-all duration-300 relative
                     ${
                       activeService === service
-                        ? "text-black text-[41px] sm:text-[70px] md:text-[85px] lg:text-[100px] font-bold tracking-tighter opacity-100"
+                        ? "text-black text-[38px] sm:text-[70px] md:text-[85px] lg:text-[100px] font-bold tracking-tighter opacity-100"
                         : "text-black/30 text-[30px] sm:text-[40px] md:text-[60px] lg:text-[70px] font-bold tracking-tighter opacity-70 "
                     }
                   `}
