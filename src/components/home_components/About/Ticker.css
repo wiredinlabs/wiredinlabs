@@ -7,9 +7,10 @@ body {
     overflow: hidden;
     white-space: nowrap;
     bottom: 0;
-    height: 3.5rem;
+    height: 8rem;
+    line-height: 6rem;
     background-color: #000;
-    rotate: -5deg;
+    rotate: -4deg;
     display: flex;
     align-items: center;
   }
@@ -24,8 +25,8 @@ body {
     display: flex;
     min-width: 200%;
     animation: marquee 10s linear infinite;
-    border-top: white 2px solid;
-    border-bottom: white 2px solid;
+    border-top: white 5px solid;
+    border-bottom: white 5px solid;
     
   }
   
