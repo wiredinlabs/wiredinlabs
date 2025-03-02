@@ -1,9 +1,9 @@
 import Image from "next/image";
-import About from "./(protected-routes)/About/page";
 import AboutSection from "@/components/home_components/About/AboutSection";
 import ServicesSection from "@/components/home_components/Services/ServicesSection";
 import WorksSection from "@/components/home_components/Works/WorksSection";
 import ContactUsSection from "@/components/home_components/ContactUs/ContactUsSection";
+import BlogsSection from "@/components/home_components/Blogs/BlogsSection";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <WorksSection />
+      <BlogsSection/>
       <ContactUsSection />
     </div>
   );
