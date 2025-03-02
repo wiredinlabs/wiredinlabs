@@ -62,7 +62,7 @@ const BlogsSection = () => {
 
   return (
     <div
-      id="blogs"
+      id="blog"
       className="min-h-screen pt-[15vh] bg-black text-white flex flex-col items-center relative w-full"
     >
       {/* Title */}
