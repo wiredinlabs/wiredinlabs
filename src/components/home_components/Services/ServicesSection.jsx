@@ -61,7 +61,7 @@ const ServicesSection = () => {
     <div
       id="services"
       ref={wrapperRef}
-      className="relative w-full"
+      className="relative w-full bg-black"
       style={{ height: `${100 * 2}vh` }}
     >
       <div ref={contentRef} className="w-full">

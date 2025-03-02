@@ -52,7 +52,7 @@ const NavBar = () => {
         { id: "#services", ref: document.getElementById("services") },
         { id: "#works", ref: document.getElementById("works") },
         { id: "#contact", ref: document.getElementById("contact") },
-        { id: "/blog", ref: document.getElementById("blog") },
+        { id: "#blog", ref: document.getElementById("blog") },
       ];
 
       for (const section of sections) {
@@ -81,9 +81,7 @@ const NavBar = () => {
   const NavLinks = ({ mobile = false }) => (
     <>
       <Link href="/" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "/"}>
-          About
-        </AnimatedCircle>
+        <AnimatedCircle isActive={activeSection === "/"}>About</AnimatedCircle>
       </Link>
       <Link href="/#services" onClick={mobile ? closeSidebar : undefined}>
         <AnimatedCircle isActive={activeSection === "#services"}>
@@ -95,8 +93,8 @@ const NavBar = () => {
           Works
         </AnimatedCircle>
       </Link>
-      <Link href="/blog" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "/blog"}>
+      <Link href="/#blog" onClick={mobile ? closeSidebar : undefined}>
+        <AnimatedCircle isActive={activeSection === "#blog"}>
           Blog
         </AnimatedCircle>
       </Link>
@@ -113,12 +111,14 @@ const NavBar = () => {
         <div className="flex items-center justify-between w-full h-[17vh]">
           {/* Logo Container - Left on desktop, center on mobile */}
           <div className="md:w-auto w-full flex md:justify-start justify-center">
-            <Image
-              src="/images/wired_in_labs_logo.png"
-              alt="wired_in_labs_logo"
-              width={89}
-              height={89}
-            />
+            <Link href="/">
+              <Image
+                src="/images/wired_in_labs_logo.png"
+                alt="wired_in_labs_logo"
+                width={89}
+                height={89}
+              />
+            </Link>
           </div>
 
           {/* Navigation Links - hidden on mobile, visible and centered on desktop */}

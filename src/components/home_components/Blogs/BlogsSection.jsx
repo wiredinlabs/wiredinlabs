@@ -61,7 +61,10 @@ const BlogsSection = () => {
   const router = useRouter();
 
   return (
-    <div id="blogs" className="min-h-screen pt-[15vh] bg-black text-white flex flex-col items-center relative w-full">
+    <div
+      id="blog"
+      className="min-h-screen pt-[15vh] bg-black text-white flex flex-col items-center relative w-full"
+    >
       {/* Title */}
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 sm:mb-8 w-full px-5 sm:px-8">
         Blogs<span className="text-[#E4ED05]">.</span>
@@ -69,17 +72,16 @@ const BlogsSection = () => {
 
       <div className="w-full px-3 sm:px-5 relative">
         <Swiper
-          slidesPerView={1.2} // Default: mobile-first approach
+          slidesPerView={1.2}
           spaceBetween={15}
           grabCursor={true}
-          cssMode={true}
-          touchEventsTarget="container"
+          touchEventsTarget="wrapper" // Change this
           scrollbar={{ draggable: true }}
           breakpoints={{
-            640: { slidesPerView: 1.5, spaceBetween: 15 }, // Small screens
-            768: { slidesPerView: 2.5, spaceBetween: 20 }, // Tablets
-            1024: { slidesPerView: 3.5, spaceBetween: 20 }, // Laptops
-            1280: { slidesPerView: 4.5, spaceBetween: 25 }, // Desktops
+            640: { slidesPerView: 1.5, spaceBetween: 15 },
+            768: { slidesPerView: 2.5, spaceBetween: 20 },
+            1024: { slidesPerView: 3.5, spaceBetween: 20 },
+            1280: { slidesPerView: 4.5, spaceBetween: 25 },
           }}
           className="relative"
         >
@@ -90,7 +92,11 @@ const BlogsSection = () => {
                 className="cursor-pointer mt-2 bg-white text-black shadow-lg transition-transform transform hover:scale-105 h-[450px] sm:h-[500px] flex-shrink-0 relative overflow-hidden"
               >
                 <div className="p-2 bg-white">
-                  <img src={blog.image} alt={blog.title} className="w-full h-[40%] object-cover" />
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full h-[40%] object-cover"
+                  />
                 </div>
                 <div className="p-4 flex flex-col h-[60%]">
                   <h3 className="text-2xl sm:text-3xl font-bold h-[15%] flex items-center tracking-tighter mb-2">
@@ -101,7 +107,11 @@ const BlogsSection = () => {
                   </p>
                 </div>
                 <div className="absolute bottom-4 right-4 w-6 h-6 sm:w-8 sm:h-8">
-                  <img src="/images/small_image.png" alt="small icon" className="w-full object-cover" />
+                  <img
+                    src="/images/small_image.png"
+                    alt="small icon"
+                    className="w-full object-cover"
+                  />
                 </div>
               </div>
             </SwiperSlide>

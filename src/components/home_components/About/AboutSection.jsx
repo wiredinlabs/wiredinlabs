@@ -4,7 +4,10 @@ import Ticker from "./Ticker";
 // Main About Section Component
 export default function AboutSection() {
   return (
-    <div id="about" className="min-h-[175vh] md:min-h-[60vh] bg-black text-white relative">
+    <div
+      id="about"
+      className="min-h-[175vh] md:min-h-[60vh] bg-black text-white relative overflow-hidden"
+    >
       {/* Main Content */}
       <main className="container mx-auto px-4 lg:px-12 py-12 md:py-8 lg:py-12 xl:py-16 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative">
@@ -17,6 +20,8 @@ export default function AboutSection() {
                 alt="title"
                 layout="fill"
                 className="object-contain"
+                priority={true}
+                draggable="false"
               />
             </div>
 
@@ -27,6 +32,8 @@ export default function AboutSection() {
                 alt="arrow"
                 layout="fill"
                 className="object-contain"
+                priority={true}
+                draggable="false"
               />
             </div>
 
@@ -41,6 +48,8 @@ export default function AboutSection() {
                     width={40}
                     height={40}
                     className="object-contain"
+                    priority={true}
+                    draggable="false"
                   />
                 </div>
                 <p className="font-light text-sm md:text-md lg:text-md xl:text-lg tracking-tighter">
@@ -59,6 +68,8 @@ export default function AboutSection() {
                     width={40}
                     height={40}
                     className="object-contain"
+                    priority={true}
+                    draggable="false"
                   />
                 </div>
                 <p className="font-light text-sm md:text-md lg:text-md xl:text-lg tracking-tighter">
@@ -78,6 +89,8 @@ export default function AboutSection() {
               alt="hand"
               layout="fill"
               className="object-contain"
+              priority={true}
+              draggable="false"
             />
           </div>
         </div>
