@@ -14,7 +14,7 @@ const blogs = [
     description:
       "Wired-In Labs blends creativity with technology, crafting immersive digital experiences beyond templates. From sleek web design to interactive coding, we help brands stand out with innovation-driven solutions. Let’s build something extraordinary!",
     image: "/images/blog1.png",
-    link: "/blog/1",
+    link: "/blog/blog-1",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const blogs = [
     description:
       "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
     image: "/images/blog2.png",
-    link: "/blog/2",
+    link: "/blog/blog-2",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const blogs = [
     description:
       "A great website combines design, speed, security, and content. Key factors include easy navigation, mobile-friendliness, SEO, fast loading, and strong CTAs. Optimize for success and stand out online!",
     image: "/images/blog3.png",
-    link: "/blog/3",
+    link: "/blog/blog-3",
   },
   {
     id: 4,
@@ -38,24 +38,8 @@ const blogs = [
     description:
       "Creative web design and compelling content enhance credibility, user experience, and conversions. Optimize your site with intuitive navigation, storytelling, and SEO for a stronger online presence!",
     image: "/images/blog4.png",
-    link: "/blog/4",
-  }/*,
-  {
-    id: 5,
-    title: "Random Shit 5",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-    image: "/images/blog_image.png",
-    link: "/blog/5",
-  },
-  {
-    id: 6,
-    title: "Random Shit 6",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
-    image: "/images/blog_image.png",
-    link: "/blog/6",
-  },*/
+    link: "/blog/blog-4",
+  }
 ];
 
 const BlogsSection = () => {
