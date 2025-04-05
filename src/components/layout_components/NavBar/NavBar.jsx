@@ -8,6 +8,11 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsVisible(true); // Ensure navbar resets when route changes
+  }, [pathname]);
+  
   const [activeSection, setActiveSection] = useState("/");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);

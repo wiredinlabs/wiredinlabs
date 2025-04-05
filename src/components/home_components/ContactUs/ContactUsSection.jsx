@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 
 const ContactUsSection = () => {
   const formRef = useRef(null);
@@ -180,7 +181,9 @@ const ContactUsSection = () => {
       </div>
       <div className="self-center mb-4 text-sm sm:text-base text-center px-4">
         2025 © Wired-In Labs. |{" "}
-        <span className="cursor-pointer">Terms & Policies</span>
+        <Link href="/terms-and-conditions">
+          <span className="underline cursor-pointer">Terms and Conditions</span>
+        </Link>
       </div>
     </div>
   );
