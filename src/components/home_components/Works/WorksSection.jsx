@@ -154,8 +154,8 @@ export default function WorksSection() {
       {/* Header with line */}
       {/* <div className="max-w-7xl mx-auto"> */}
         <div className="flex items-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-bold mr-6">Our Works</h2>
-          <span className="text-5xl md:text-7xl font-bold text-[#CCFF00]">*</span>
+          <h2 className="text-5xl md:text-7xl font-bold mr-6 tracking-tighter">Our Works</h2>
+          <span className="text-6xl md:text-8xl font-bold text-[#E4ED05]">*</span>
           <div className="flex-grow h-px bg-gray-800 ml-8 hidden md:block"></div>
         </div>
 
