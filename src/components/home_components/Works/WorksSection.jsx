@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -26,18 +27,18 @@ export default function WorksSection() {
 
   // Base items for each column
   const baseColumnOneItems = [
-    { id: 1, image: "/placeholder-image.jpg" },
-    { id: 4, image: "/placeholder-image.jpg" },
+    { id: 1, video: "/images/qissa_vid.webm" },
+    { id: 4, image: "/images/tutor_x.jpg" },
   ];
 
   const baseColumnTwoItems = [
-    { id: 2, image: "/placeholder-image.jpg" },
-    { id: 5, image: "/placeholder-image.jpg" },
+    { id: 2, image: "/images/bfc_phone.jpg" },
+    { id: 5, video: "/images/bfc_vid.webm" },
   ];
 
   const baseColumnThreeItems = [
-    { id: 3, image: "/placeholder-image.jpg" },
-    { id: 6, image: "/placeholder-image.jpg" },
+    { id: 3, video: "/images/dynr_vid.webm" },
+    { id: 6, image: "/images/dynr_photo.jpg" },
   ];
   
   // Generate many copies of each item with unique IDs
@@ -118,18 +119,30 @@ export default function WorksSection() {
         <div className="relative overflow-hidden">
           {/* Image container with aspect ratio */}
           <div className="relative aspect-[4/5] bg-gray-200 overflow-hidden">
-            {/* Placeholder for image */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-              BioForce
-            </div>
+  {work.video ? (
+    <video
+      src={work.video}
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  ) : (
+    <img
+      src={work.image}
+      alt="Work"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  )}
 
-            {/* Overlay on hover */}
-            <div
-              className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 ${
-                hoveredIndex === work.id ? "bg-opacity-10" : ""
-              }`}
-            ></div>
-          </div>
+  {/* Hover overlay */}
+  <div
+    className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 ${
+      hoveredIndex === work.id ? "bg-opacity-10" : ""
+    }`}
+  ></div>
+</div>
         </div>
       </Link>
     </div>
@@ -141,8 +154,8 @@ export default function WorksSection() {
       {/* Header with line */}
       {/* <div className="max-w-7xl mx-auto"> */}
         <div className="flex items-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-bold mr-6">Our Works</h2>
-          <span className="text-5xl md:text-7xl font-bold text-[#CCFF00]">*</span>
+          <h2 className="text-5xl md:text-7xl font-bold mr-6 tracking-tighter">Our Works</h2>
+          <span className="text-6xl md:text-8xl font-bold text-[#E4ED05]">*</span>
           <div className="flex-grow h-px bg-gray-800 ml-8 hidden md:block"></div>
         </div>
 
