@@ -14,7 +14,7 @@ const blogs = [
     description:
       "Wired-In Labs blends creativity with technology, crafting immersive digital experiences beyond templates. From sleek web design to interactive coding, we help brands stand out with innovation-driven solutions. Let’s build something extraordinary!",
     image: "/images/blog1.png",
-    link: "/blog/blog-1",
+    link: "/blog/Why-Wired-In-Labs",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const blogs = [
     description:
       "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
     image: "/images/blog2.png",
-    link: "/blog/blog-2",
+    link: "/blog/Design-Trends-Defining-2025",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const blogs = [
     description:
       "A great website combines design, speed, security, and content. Key factors include easy navigation, mobile-friendliness, SEO, fast loading, and strong CTAs. Optimize for success and stand out online!",
     image: "/images/blog3.png",
-    link: "/blog/blog-3",
+    link: "/blog/What-Makes-A-Good-Website",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const blogs = [
     description:
       "Creative web design and compelling content enhance credibility, user experience, and conversions. Optimize your site with intuitive navigation, storytelling, and SEO for a stronger online presence!",
     image: "/images/blog4.png",
-    link: "/blog/blog-4",
+    link: "/blog/Web-Design-For-Business",
   }
 ];
 
