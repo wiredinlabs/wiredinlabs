@@ -40,21 +40,22 @@ export const metadata = {
   },
 };
 
+export const dynamic = "force-static";
+
 export default function Blog3() {
   return (
-    <div className="bg-black text-white">
-      <div className="relative w-full h-[20vh] md:h-[30vh] lg:h-[40vh]">
+    <div className="bg-black text-white pt-36">
+      <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
         <Image
           src="/images/blog3.png"
           alt="Futuristic digital design elements representing 2025 trends"
           fill
-          priority
           className="object-cover"
         />
       </div>
       
       <div>
-        <div className="max-w-5xl mx-auto px-4 pt-48">
+        <div className="max-w-5xl mx-auto px-4 pt-12">
           <main>
             <div className="text-sm text-gray-400 uppercase tracking-wider mb-4">Web Design</div>
             <h1 className="text-5xl font-bold mb-6 leading-tight">What Makes a Good Website? Key Elements for Success</h1>
