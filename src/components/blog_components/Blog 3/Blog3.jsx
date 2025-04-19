@@ -50,6 +50,7 @@ export default function Blog3() {
           src="/images/blog3.png"
           alt="Futuristic digital design elements representing 2025 trends"
           fill
+          loading="lazy"
           className="object-cover"
         />
       </div>
