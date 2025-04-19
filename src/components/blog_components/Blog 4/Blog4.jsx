@@ -51,6 +51,7 @@ export default function Blog4() {
           src="/images/blog4.png"
           alt="Futuristic digital design elements representing 2025 trends"
           fill
+          loading="lazy"
           className="object-cover"
         />
       </div>

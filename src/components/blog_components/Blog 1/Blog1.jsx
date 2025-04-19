@@ -49,6 +49,7 @@ export default function Blog1() {
           src="/images/blog1.png"
           alt="Abstract art symbolizing creativity and technology at Wired-In Labs"
           fill
+          loading="lazy"
           className="object-cover"
         />
       </div>
