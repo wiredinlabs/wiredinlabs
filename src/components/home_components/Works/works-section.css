@@ -1,0 +1,31 @@
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.ticker-column {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 30s linear infinite;
+  will-change: transform;
+}
+
+.delay-0 .ticker-track {
+  animation-delay: 0s;
+}
+.delay-2 .ticker-track {
+  animation-delay: 2s;
+}
+.delay-5 .ticker-track {
+  animation-delay: 5s;
+}
