@@ -83,7 +83,7 @@ const ServicesSection = () => {
           `}
         >
           {/* Rotating Star Icon */}
-          <div
+          {/* <div
             className="absolute top-4 md:top-6 lg:top-8 left-4 md:left-6 lg:left-8 transition-transform duration-300 ease-in-out"
             style={{ transform: `rotate(${rotation}deg)` }}
           >
@@ -97,7 +97,7 @@ const ServicesSection = () => {
                 fill="black"
               />
             </svg>
-          </div>
+          </div> */}
 
           {/* Services List */}
           <div className="flex flex-col justify-center min-h-[60vh] lg:min-h-[85vh] py-8 md:py-12 lg:py-16 px-6 md:px-8 lg:px-12">
