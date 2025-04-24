@@ -18,7 +18,7 @@ export default function AboutSection() {
               <Image
                 src="/images/title.png"
                 alt="title"
-                layout="fill"
+                fill
                 className="object-contain"
                 priority={true}
                 draggable="false"
@@ -30,7 +30,7 @@ export default function AboutSection() {
               <Image
                 src="/images/arrow1.png"
                 alt="arrow"
-                layout="fill"
+                fill
                 className="object-contain"
                 priority={true}
                 draggable="false"
@@ -87,7 +87,7 @@ export default function AboutSection() {
             <Image
               src="/images/hand_copy2.png"
               alt="hand"
-              layout="fill"
+              fill
               className="object-contain"
               priority={true}
               draggable="false"
