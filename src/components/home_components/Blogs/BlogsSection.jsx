@@ -19,11 +19,11 @@ const blogs = [
   },
   {
     id: 2,
-    title: "Design Trends Defining 2025",
+    title: "Every Business Needs a Website",
     description:
-      "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
-    image: "/images/blog2.png",
-    link: "/blog/Design-Trends-Defining-2025",
+      "A strong website isn’t optional anymore—it’s essential. Discover how a professional site builds trust, boosts visibility, and fuels growth for every business in 2025.",
+    image: "/images/blog5.png",
+    link: "/blog/Why-Every-Business-Needs-A-Website",
   },
   {
     id: 3,
@@ -35,12 +35,20 @@ const blogs = [
   },
   {
     id: 4,
+    title: "Design Trends Defining 2025",
+    description:
+      "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
+    image: "/images/blog2.png",
+    link: "/blog/Design-Trends-Defining-2025",
+  },
+  {
+    id: 5,
     title: "Web Design for Business",
     description:
       "Creative web design and compelling content enhance credibility, user experience, and conversions. Optimize your site with intuitive navigation, storytelling, and SEO for a stronger online presence!",
     image: "/images/blog4.png",
     link: "/blog/Web-Design-For-Business",
-  },
+  }
 ];
 
 const BlogsSection = () => {
