@@ -256,6 +256,7 @@ export default function WorksSection() {
       onMouseEnter={() => setHoveredIndex(work.id)}
       onMouseLeave={() => setHoveredIndex(null)}
     >
+
       <Link href={`/works/${work.id}`} className="block">
         <div className="relative overflow-hidden">
           <div className="relative aspect-[4/5] bg-gray-200 overflow-hidden">
@@ -326,7 +327,7 @@ export default function WorksSection() {
         {/* View All Works */}
         <div className="mt-24 text-center">
           <Link
-            href="/works"
+            href="\works"
             className="inline-flex items-center border border-white px-8 py-3 transition-all duration-300 hover:bg-white hover:text-black group"
           >
             <span className="mr-3">View All Works</span>
