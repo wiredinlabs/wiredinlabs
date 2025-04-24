@@ -285,7 +285,7 @@ export default function WorksSection() {
             ></div>
           </div>
         </div>
-      {/* </Link> */}
+      </Link>
     </div>
   );
 
