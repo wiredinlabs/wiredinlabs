@@ -65,7 +65,7 @@ export default function Blog5() {
             </h1>
 
             <div className="flex items-center mb-8 text-sm text-gray-400">
-              <div>April 24, 2025</div>
+            <div>March 31, 2025</div>
             </div>
 
             <div className="text-lg leading-relaxed pb-12">
@@ -135,7 +135,7 @@ export default function Blog5() {
                 Whether you’re launching a new venture or upgrading an outdated site, a great website will support your growth, boost credibility, and help you stand out in any market.
               </p>
               <p className="mb-6">
-                <strong>Let’s talk.</strong> At [Your Company Name], we build websites that do more than look good—they deliver results. Get in touch for a free consultation and let’s create something that grows with your business.
+                <strong>Let’s talk.</strong> At Wired In Labs, we build websites that do more than look good—they deliver results. Get in touch for a free consultation and let’s create something that grows with your business.
               </p>
             </div>
           </main>

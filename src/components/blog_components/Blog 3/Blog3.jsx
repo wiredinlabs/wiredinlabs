@@ -62,7 +62,7 @@ export default function Blog3() {
             <h1 className="text-5xl font-bold mb-6 leading-tight">What Makes a Good Website? Key Elements for Success</h1>
 
             <div className="flex items-center mb-8 text-sm text-gray-400">
-              <div>April 15, 2025</div>
+            <div>April 7, 2025</div>
             </div>
 
             <div className="text-lg leading-relaxed pb-12">
