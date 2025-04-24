@@ -61,7 +61,7 @@ export default function Blog1() {
           <h1 className="text-5xl font-bold mb-6 leading-tight">Why Wired-In Labs?</h1>
 
           <div className="flex items-center mb-8 text-sm text-gray-400">
-            <div>January 23, 2025</div>
+          <div>March 24, 2025</div>
           </div>
 
           <div className="text-lg leading-relaxed pb-12">

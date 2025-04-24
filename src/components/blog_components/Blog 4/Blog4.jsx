@@ -63,7 +63,7 @@ export default function Blog4() {
             <h1 className="text-5xl font-bold mb-6 leading-tight">Boosting Engagement with Creative Web Design</h1>
 
             <div className="flex items-center mb-8 text-sm text-gray-400">
-              <div>April 15, 2025</div>
+            <div>April 21, 2025</div>
             </div>
 
             <div className="text-lg leading-relaxed pb-12">

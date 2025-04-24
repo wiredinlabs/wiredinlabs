@@ -61,7 +61,7 @@ export default function Blog2() {
             <h1 className="text-5xl font-bold mb-6 leading-tight">Design Trends That Will Be Defining 2025</h1>
 
             <div className="flex items-center mb-8 text-sm text-gray-400">
-              <div>April 15, 2025</div>
+              <div>April 14, 2025</div>
             </div>
 
             <div className="text-lg leading-relaxed pb-12">
