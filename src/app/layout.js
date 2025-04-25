@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout_components/NavBar/NavBar";
+import ContactUsSection from "@/components/home_components/ContactUs/ContactUsSection";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,6 +23,8 @@ export default function RootLayout({ children }) {
       >
         <NavBar />
         {children}
+      <ContactUsSection />
+
       </body>
     </html>
   );

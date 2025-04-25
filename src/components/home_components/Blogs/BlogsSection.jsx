@@ -14,7 +14,7 @@ const blogs = [
     title: "Why Wired In Labs?",
     description:
       "Wired-In Labs blends creativity with technology, crafting immersive digital experiences beyond templates. From sleek web design to interactive coding, we help brands stand out with innovation-driven solutions. Let’s build something extraordinary!",
-    image: "/images/blog1.png",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog1.png",
     link: "/blog/Why-Wired-In-Labs",
   },
   {
@@ -22,7 +22,7 @@ const blogs = [
     title: "Every Business Needs a Website",
     description:
       "A strong website isn’t optional anymore—it’s essential. Discover how a professional site builds trust, boosts visibility, and fuels growth for every business in 2025.",
-    image: "/images/blog5.png",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog5.png",
     link: "/blog/Why-Every-Business-Needs-A-Website",
   },
   {
@@ -30,7 +30,7 @@ const blogs = [
     title: "What Makes a Good Website?",
     description:
       "A great website combines design, speed, security, and content. Key factors include easy navigation, mobile-friendliness, SEO, fast loading, and strong CTAs. Optimize for success and stand out online!",
-    image: "/images/blog3.png",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog3.png",
     link: "/blog/What-Makes-A-Good-Website",
   },
   {
@@ -38,7 +38,7 @@ const blogs = [
     title: "Design Trends Defining 2025",
     description:
       "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
-    image: "/images/blog2.png",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog2.png",
     link: "/blog/Design-Trends-Defining-2025",
   },
   {
@@ -46,7 +46,7 @@ const blogs = [
     title: "Web Design for Business",
     description:
       "Creative web design and compelling content enhance credibility, user experience, and conversions. Optimize your site with intuitive navigation, storytelling, and SEO for a stronger online presence!",
-    image: "/images/blog4.png",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog4.png",
     link: "/blog/Web-Design-For-Business",
   }
 ];
@@ -140,7 +140,7 @@ const BlogsSection = () => {
                     </div>
                     <div className="absolute bottom-4 right-4 w-6 md:w-8 h-6 md:h-8">
                       <img
-                        src="/images/small_image.png"
+                        src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/small_image.png"
                         alt="small icon"
                         className="w-full object-cover"
                       />
@@ -152,14 +152,14 @@ const BlogsSection = () => {
           </Swiper>
           <div className="absolute top-1/2 left-[-40px] z-10 transform -translate-y-1/2 cursor-pointer swiper-button-prev hidden sm:flex">
             <img
-              src="/images/chevron-left.png"
+              src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/chevron-left.png"
               alt="Previous"
               className="w-4 h-4 sm:w-8 sm:h-8"
             />
           </div>
           <div className="absolute top-1/2 right-[-40px] z-10 transform -translate-y-1/2 cursor-pointer swiper-button-next hidden sm:flex">
             <img
-              src="/images/chevron-right.png"
+              src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/chevron-right.png"
               alt="Next"
               className="w-4 h-4 sm:w-8 sm:h-8"
             />
