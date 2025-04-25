@@ -27,18 +27,18 @@
 
 //   // Base items for each column
 //   const baseColumnOneItems = [
-//     { id: 1, video: "/images/qissa_vid.mp4" },
-//     { id: 4, image: "/images/tutor_x.jpg" },
+//     { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.mp4" },
+//     { id: 4, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/tutor_x.jpg" },
 //   ];
 
 //   const baseColumnTwoItems = [
-//     { id: 2, image: "/images/bfc_phone.jpg" },
-//     { id: 5, video: "/images/bfc_vid.mp4" },
+//     { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
+//     { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.mp4" },
 //   ];
 
 //   const baseColumnThreeItems = [
-//     { id: 3, video: "/images/dynr_vid.mp4" },
-//     { id: 6, image: "/images/dynr_photo.jpg" },
+//     { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.mp4" },
+//     { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
 //   ];
   
 //   // Generate many copies of each item with unique IDs
@@ -235,18 +235,18 @@ export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const columnOneItems = [
-    { id: 1, video: "/images/qissa_vid.webm" },
-    { id: 4, image: "/images/tutor_x.jpg" },
+    { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.webm" },
+    { id: 4, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/tutor_x.jpg" },
   ];
 
   const columnTwoItems = [
-    { id: 2, image: "/images/bfc_phone.jpg" },
-    { id: 5, video: "/images/bfc_vid.webm" },
+    { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
+    { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.webm" },
   ];
 
   const columnThreeItems = [
-    { id: 3, video: "/images/dynr_vid.webm" },
-    { id: 6, image: "/images/dynr_photo.jpg" },
+    { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.webm" },
+    { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
   ];
 
   const renderWorkItem = (work, key) => (

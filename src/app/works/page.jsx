@@ -4,7 +4,7 @@ import { useState } from "react";
 const works = [
   {
     id: 1,
-    image: "/images/qissa_laptop.jpg",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_laptop.jpg",
     title: "Qissa",
     description: "Qissa is a modern e-commerce platform built by Wired In that brings South Asian storytelling to life through thoughtfully curated products. We crafted a seamless shopping experience with a focus on design, performance, and cultural authenticity.",
     category: "WEB DESIGN + SHOPIFY",
@@ -13,7 +13,7 @@ const works = [
   },
   {
     id: 2,
-    image: "/images/bioforce_phone.jpg",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bioforce_phone.jpg",
     title: "BioForce Guide",
     description: "Bioforce Guide is a farmer-focused mobile app designed and developed by Wired In for one of Pakistan’s leading pesticide brands. We crafted the full UI/UX and built the app to deliver trusted information on crops, pests, and pesticides, real-time weather updates, and a direct line for farmers to connect with the company—simple, smart, and accessible.",
     category: "UI/UX + DEVELOPMENT",
@@ -22,7 +22,7 @@ const works = [
   },
   {
     id: 3,
-    image: "/images/dynr_laptop.jpg",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_laptop.jpg",
     title: "DYNR",
     description: "Dynr is a personalized food recommendation app that helps users discover what to eat based on their unique palate. Wired In led the branding and crafted the full UI/UX, creating a clean, intuitive experience that blends smart food suggestions with real restaurant reviews—making every dining decision easier and more personal.",
     category: "BRANDING + UI/UX",
@@ -31,7 +31,7 @@ const works = [
   },
   {
     id: 4,
-    image: "/images/tutor_x_phone.jpg",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/tutor_x_phone.jpg",
     title: "TutorX",
     description: "TutorX is an innovative platform that connects students with tutors, offering a unique bidding system for a personalized learning experience. Wired In brought the vision to life with sleek UI/UX design and seamless development, making learning more accessible and efficient, both online and in-person.",
     category: "DEVELOPMENT + DESIGN",
@@ -40,7 +40,7 @@ const works = [
   },
   {
     id: 5,
-    image: "/images/bioforce_web.jpg",
+    image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bioforce_web.jpg",
     title: "BioForce Chemicals",
     description: "Bioforce Chemicals is a leading agriculture company based in Multan, specializing in the manufacturing, distribution, and import of high-quality agricultural products. The website showcases a complete product catalog, offering a wide range of solutions to support farmers and businesses in the agricultural sector.",
     category: "DESIGN + WEBFLOW",
