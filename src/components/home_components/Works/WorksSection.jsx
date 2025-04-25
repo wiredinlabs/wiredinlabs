@@ -257,7 +257,7 @@ export default function WorksSection() {
       onMouseLeave={() => setHoveredIndex(null)}
     >
 
-      <Link href={`/works/${work.id}`} className="block">
+      {/* <Link href={`/works/${work.id}`} className="block"> */}
         <div className="relative overflow-hidden">
           <div className="relative aspect-[4/5] bg-gray-200 overflow-hidden">
             {work.video ? (
@@ -285,7 +285,7 @@ export default function WorksSection() {
             ></div>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 
