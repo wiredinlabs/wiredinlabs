@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        subtleBounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
+      animation: {
+        subtleBounce: 'subtleBounce 2s ease-in-out infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
