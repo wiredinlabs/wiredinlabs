@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <div
       id="about"
-      className="min-h-[175vh] md:min-h-[60vh] bg-black text-white relative overflow-hidden"
+      className="min-h-[150vh] md:min-h-[60vh] bg-black text-white relative overflow-hidden"
     >
       {/* Main Content */}
       <main className="container mx-auto px-4 lg:px-12 py-12 md:py-8 lg:py-12 xl:py-16 relative">
@@ -38,7 +38,7 @@ export default function AboutSection() {
             </div>
 
             {/* Smaller texts */}
-            <div className="grid grid-cols-1 md:grid-cols-2 pt-[90vh] md:pt-0 gap-8 md:gap-4 lg:gap-4 items-center w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 pt-[70vh] md:pt-0 gap-8 md:gap-4 lg:gap-4 items-center w-full">
               {/* First Text Block with Image */}
               <div className="space-y-4 w-full md:w-[100%] lg:w-[90%]">
                 <div className="flex items-start">
@@ -83,7 +83,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* Right Column - Hand and Asterisk Images (independent and layered) */}
-        <div className="absolute top-[40%] md:top[10%] lg:top-[10%] left-[20%] md:left-[60%] lg:left-[65%] w-[60vw] md:w-[40vw] lg:w-[50vw] h-[50vh] md:h-[50vh] lg:h-[35vh]">
+        <div className="absolute top-[40%] md:top[10%] lg:top-[12%] left-[20%] md:left-[60%] lg:left-[65%] w-[60vw] md:w-[40vw] lg:w-[50vw] h-[50vh] md:h-[50vh] lg:h-[35vh]">
           {/* Hand Image */}
           <div className="absolute top-[-10%] md:top-[-20%] lg:top-[20%] left-[-15%] md:left-[-5%] lg:left-[-25%] w-[70vw] md:w-[40vw] lg:w-[50vw] h-[60vh] md:h-[35vh] lg:h-[80vh]">
             <Image
