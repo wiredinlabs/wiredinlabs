@@ -118,7 +118,7 @@ const NavBar = () => {
           <div className="md:w-auto w-full flex md:justify-start justify-center">
             <Link href="/">
               <Image
-                src="/images/wired_in_labs_logo.png"
+                src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/wired_in_labs_logo.png"
                 alt="wired_in_labs_logo"
                 width={89}
                 height={89}

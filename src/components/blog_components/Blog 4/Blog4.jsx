@@ -23,7 +23,7 @@ export const metadata = {
     siteName: "Wired-In Labs",
     images: [
       {
-        url: "https://yourdomain.com/images/blog4-cover.jpg",
+        url: "https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog4-cover.jpg",
         width: 1200,
         height: 630,
         alt: "Futuristic digital design elements representing 2025 trends",
@@ -37,7 +37,7 @@ export const metadata = {
     title: "Boosting Engagement with Creative Web Design",
     description:
       "See how creative visuals, storytelling, and optimized UX can supercharge engagement on your website.",
-    images: ["https://yourdomain.com/images/blog4-cover.jpg"],
+    images: ["https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog4-cover.jpg"],
   },
 };
 
@@ -48,7 +48,7 @@ export default function Blog4() {
     <div className="bg-black text-white pt-36">
       <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
         <Image
-          src="/images/blog4.png"
+          src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog4.png"
           alt="Futuristic digital design elements representing 2025 trends"
           fill
           loading="lazy"

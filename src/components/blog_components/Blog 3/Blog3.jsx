@@ -22,7 +22,7 @@ export const metadata = {
     siteName: "Wired-In Labs",
     images: [
       {
-        url: "https://yourdomain.com/images/blog3-cover.jpg",
+        url: "https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog3-cover.jpg",
         width: 1200,
         height: 630,
         alt: "Futuristic digital design elements representing 2025 trends",
@@ -36,7 +36,7 @@ export const metadata = {
     title: "What Makes a Good Website?",
     description:
       "Learn the key factors behind great web design—from UX to SEO—and build a high-performing website.",
-    images: ["https://yourdomain.com/images/blog3-cover.jpg"],
+    images: ["https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog3-cover.jpg"],
   },
 };
 
@@ -47,7 +47,7 @@ export default function Blog3() {
     <div className="bg-black text-white pt-36">
       <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
         <Image
-          src="/images/blog3.png"
+          src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog3.png"
           alt="Futuristic digital design elements representing 2025 trends"
           fill
           loading="lazy"
