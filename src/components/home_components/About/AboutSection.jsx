@@ -83,7 +83,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* Right Column - Hand and Asterisk Images (independent and layered) */}
-        <div className="absolute top-[40%] md:top[10%] lg:top-[12%] left-[20%] md:left-[60%] lg:left-[65%] w-[60vw] md:w-[40vw] lg:w-[50vw] h-[50vh] md:h-[50vh] lg:h-[35vh]">
+        <div className="absolute top-[40%] md:top[10%] lg:top-[15%] left-[20%] md:left-[60%] lg:left-[65%] w-[60vw] md:w-[40vw] lg:w-[50vw] h-[50vh] md:h-[50vh] lg:h-[35vh]">
           {/* Hand Image */}
           <div className="absolute top-[-10%] md:top-[-20%] lg:top-[20%] left-[-15%] md:left-[-5%] lg:left-[-25%] w-[70vw] md:w-[40vw] lg:w-[50vw] h-[60vh] md:h-[35vh] lg:h-[80vh]">
             <Image

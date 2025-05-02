@@ -3,7 +3,7 @@ import "./Ticker.css";
 
 const Ticker = () => {
   return (
-    <div className="ticker-wrap -mt-10 md:-mt-16 lg:mt-10 xl:mt-[85px] -mb-24 lg:mb-24">
+    <div className="ticker-wrap -mt-10 md:-mt-16 lg:mt-10 xl:mt-[100px] -mb-24 lg:mb-24">
       <div className="ticker">
         <div className="ticker-content">
           {[...Array(8)].map((_, index) => (
