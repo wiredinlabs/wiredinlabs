@@ -3,11 +3,11 @@ import "./Ticker.css";
 
 const Ticker = () => {
   return (
-    <div className="ticker-wrap mt-20 md:-mt-10 lg:-mt-5 xl:mt-[120px] mb-2 lg:mb-24">
+    <div className="ticker-wrap -mt-10 md:-mt-16 lg:mt-10 xl:mt-[85px] -mb-24 lg:mb-24">
       <div className="ticker">
         <div className="ticker-content">
           {[...Array(8)].map((_, index) => (
-              <span className="item px-16" key={index}>
+              <span className="item tracking-tighter" key={index}>
                 frontend
                 <span className="text-[#E4ED05] px-16">&</span>
                 design

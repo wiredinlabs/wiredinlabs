@@ -1,51 +1,101 @@
 body {
-    margin: 0;
-  }
-  
-  .ticker-wrap {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    bottom: 0;
-    height: 8rem;
-    line-height: 6rem;
-    background-color: #000;
-    rotate: -4deg;
-    display: flex;
-    align-items: center;
-  }
-  
-  .ticker {
-    display: flex;
-    width: 100%;
+  margin: 0;
+}
 
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  bottom: 0;
+  height: 6rem;
+  line-height: 5rem;
+  background-color: #000;
+  rotate: -5deg;
+  display: flex;
+  align-items: center;
+}
+
+.ticker {
+  display: flex;
+  width: 100%;
+}
+
+.ticker-content {
+  display: flex;
+  min-width: 200%;
+  animation: marquee 20s linear infinite;
+  border-top: white 1.5px solid;
+  border-bottom: white 1.5px solid;
+}
+
+.item {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 2.5rem;
+  color: white;
+  font-family: sans-serif;
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+.item span {
+  padding: 0 3rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
   }
-  
-  .ticker-content {
-    display: flex;
-    min-width: 200%;
-    animation: marquee 10s linear infinite;
-    border-top: white 5px solid;
-    border-bottom: white 5px solid;
-    
+  to {
+    transform: translateX(-50%);
   }
-  
+}
+
+/* Tablets (iPads) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ticker-wrap {
+    height: 4rem;
+    line-height: 3rem;
+  }
+
   .item {
-    display: inline-block;
-    padding: 0 1rem;
+    font-size: 1.5rem;
+    padding: 0 0rem;
+  }
+
+  .item span {
+    padding: 0 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ticker-wrap {
+    height: 5rem;
+    line-height: 4rem;
+  }
+
+  .item {
     font-size: 2rem;
-    color: white;
-    font-family: sans-serif;
-    white-space: nowrap;
-    font-weight: 500;
   }
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+
+  .item span {
+    padding: 0 1rem;
   }
-  
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ticker-wrap {
+    height: 4rem;
+    line-height: 3rem;
+  }
+
+  .item {
+    font-size: 1.5rem;
+  }
+
+  .item span {
+    padding: 0 1rem;
+  }
+}
