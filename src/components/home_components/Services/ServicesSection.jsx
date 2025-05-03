@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import "./services-section.css";
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState("UX Research");
@@ -121,14 +122,17 @@ const ServicesSection = () => {
                   `}
                 >
                   {service}
-                  <div className={`absolute ${
-                      activeService === service
-                        ? "block"
-                        : "hidden"
-                    }`} style={{ top: "-37px", left: "-44px" }}>
+                  {/* <div
+                    className={`absolute ${
+                      activeService === service ? "block" : "hidden"
+                    }`}
+                    style={{ top: "-37px", left: "-44px" }}
+                  > */}
                     <svg
-                      width="68"
-                      height="74"
+                      className={`three-lines absolute ${
+                        activeService === service ? "block" : "hidden"
+                      }`}
+        
                       viewBox="0 0 68 74"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +156,7 @@ const ServicesSection = () => {
                         fill="black"
                       />
                     </svg>
-                  </div>
+                  {/* </div> */}
                 </div>
               ))}
             </div>
