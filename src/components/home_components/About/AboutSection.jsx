@@ -16,7 +16,7 @@ export default function AboutSection() {
             {/* Main headings */}
             <div className="relative h-[30vh] md:h-[25vh] lg:h-[50vh] w-full md:w-[50vw] lg:w-[40vw] max-w-full">
               <Image
-                src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/title.png"
+                src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/title.png`}
                 alt="title"
                 fill
                 className="object-contain"
@@ -28,7 +28,7 @@ export default function AboutSection() {
             {/* Arrow Image pointing to the hand */}
             <div className="hidden md:block absolute top-[35%] lg:top-[45%] xl:top-[50%] left-[75%] md:left-[75%] lg:left-[65%] xl:left-[80%] w-[8vw] md:w-[10vw] h-[8vh] md:h-[8vh] lg:h-[6vh] xl:h-[12vh]">
               <Image
-                src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/arrow1.png"
+                src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/arrow1.png`}
                 alt="arrow"
                 fill
                 className="object-contain"
@@ -43,7 +43,7 @@ export default function AboutSection() {
               <div className="space-y-4 w-full md:w-[100%] lg:w-[90%]">
                 <div className="flex items-start">
                   <Image
-                    src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bullet.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/bullet.png`}
                     alt="Tech Innovation"
                     width={40}
                     height={40}
@@ -63,7 +63,7 @@ export default function AboutSection() {
               <div className="space-y-4 w-full md:w-[100%] lg:w-[90%]">
                 <div className="flex items-start">
                   <Image
-                    src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bullet.png"
+                    src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/bullet.png`}
                     alt="Future Tech"
                     width={40}
                     height={40}
@@ -87,7 +87,7 @@ export default function AboutSection() {
           {/* Hand Image */}
           <div className="absolute top-[-10%] md:top-[-20%] lg:top-[20%] left-[-15%] md:left-[-5%] lg:left-[-25%] w-[70vw] md:w-[40vw] lg:w-[50vw] h-[60vh] md:h-[35vh] lg:h-[80vh]">
             <Image
-              src="/images/hand.png"
+              src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/hand.png`}
               alt="hand"
               fill
               className="object-contain"
@@ -99,7 +99,7 @@ export default function AboutSection() {
           {/* Asterisk Image */}
           <div className="absolute top-[-20%] md:top-[-20%] lg:top-[20%] left-[-5%] md:left-[10%] lg:left-[-20%] w-[30vw] md:w-[15vw] lg:w-[30vw] h-[30vh] md:h-[10vh] lg:h-[13vw] animate-subtleBounce">
             <Image
-              src="/images/asterisk.png"
+              src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/asterisk.png`}
               alt="asterisk"
               fill
               className="object-contain"

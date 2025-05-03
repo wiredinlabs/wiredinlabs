@@ -10,18 +10,17 @@ const ContactUsSection = () => {
     name: "",
     email: "",
   });
-
   const sendEmail = async (e) => {
     e.preventDefault(); // Prevent page reload
-    console.log("Sending email...", formRef.current);
-    console.log("Sending email...", formData);
-
+    // console.log("Sending email...", formRef.current);
+    // console.log("Sending email...", formData);
+    
     try {
       const response = await emailjs.sendForm(
-        "service_0hfhjym", // Your EmailJS Service ID
-        "template_effqyo2", // Your EmailJS Template ID
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Your EmailJS Service ID
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Your EmailJS Template ID
         formRef.current, // Correctly pass the form reference
-        "lYy5cfwUpuKFhKMZ4" // Your Public Key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY // Your Public Key
       );
       console.log("Email sent successfully:", response.text);
       alert("Email sent successfully!");
