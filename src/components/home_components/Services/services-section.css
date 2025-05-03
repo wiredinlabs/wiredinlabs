@@ -1,0 +1,30 @@
+.three-lines {
+    width: 68px;
+    top: -37px;
+    left: -44px;
+  
+  }
+  
+  @media (max-width: 815px) {
+    .three-lines {
+      width: 48px;
+      top: -23px;
+      left: -26px;
+    }
+  }
+
+  @media (max-width: 730px) {
+    .three-lines {
+      width: 40px;
+      top: -22px;
+      left: -22px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .three-lines {
+      width: 25px;
+      top: -15px;
+      left: -15px;
+    }
+  }
