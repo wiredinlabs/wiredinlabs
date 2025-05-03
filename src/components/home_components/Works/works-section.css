@@ -29,3 +29,14 @@
 .delay-5 .ticker-track {
   animation-delay: 5s;
 }
+
+.star-icon {
+  width: 85px;
+
+}
+
+@media (max-width: 768px) {
+  .star-icon {
+    width: 52px;
+  }
+}
