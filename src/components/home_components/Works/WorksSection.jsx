@@ -230,23 +230,37 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import "./works-section.css"; // Import custom CSS for animation
+import image1 from './1.png';
+import image2 from './painting-dynr.png';
+import image3 from './1-watch.png';
+import image4 from './2-ticket.png';
+import image5 from './1-tag-qissa.png';
+import image6 from './phone-bfc.png';
+import image7 from './poster-bfc.png';
+
 
 export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const columnOneItems = [
-    { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.webm" },
-    { id: 4, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/tutor_x.jpg" },
+    // { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.webm" },
+    { id: 4, image: image4 },
+    {id :1, image: image2},
+    // {id:4, image: image1}
   ];
 
   const columnTwoItems = [
-    { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
-    { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.webm" },
+    // { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
+    {id:2, image:image5},
+    // { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.webm" },
+    {id:4, image: image7}
   ];
 
   const columnThreeItems = [
-    { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.webm" },
-    { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
+    // { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.webm" },
+    // { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
+    {id: 6, image:image6},
+    {id : 3, image: image3}
   ];
 
   const renderWorkItem = (work, key) => (
@@ -259,7 +273,7 @@ export default function WorksSection() {
 
       {/* <Link href={`/works/${work.id}`} className="block"> */}
         <div className="relative overflow-hidden">
-          <div className="relative aspect-[4/5] bg-gray-200 overflow-hidden">
+          <div className="relative aspect-[4/5]  overflow-hidden">
             {work.video ? (
               <video
                 src={work.video}
