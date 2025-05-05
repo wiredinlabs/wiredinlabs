@@ -20,6 +20,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Inter, sans-serif;
+  background-color: black;
 }
 
 /*
@@ -49,4 +50,41 @@ body {
    /* border: 2px solid #555555; */
  }
  
- 
+ .dotted-bg {
+  background-color: black; /* ensures base is solid black */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-60px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-bubble {
+  animation: bubble 2.5s ease-in-out infinite;
+}
