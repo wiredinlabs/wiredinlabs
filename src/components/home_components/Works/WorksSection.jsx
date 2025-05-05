@@ -228,90 +228,81 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import "./works-section.css"; // Import custom CSS for animation
+import image1 from "./1.png";
+import image2 from "./painting-dynr.png";
+import image3 from "./1-watch.png";
+import image4 from "./2-ticket.png";
+import image5 from "./1-tag-qissa.png";
+import image6 from "./phone-bfc.png";
+import image7 from "./poster-bfc.png";
 
 export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const columnOneItems = [
-    {
-      id: 1,
-      video:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/qissa_vid.webm",
-    },
-    {
-      id: 4,
-      image:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/tutor_x.jpg",
-    },
+
+    // { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.webm" },
+    { id: 4, image: image4 },
+    { id: 1, image: image2 },
+    // {id:4, image: image1}
   ];
 
   const columnTwoItems = [
-    {
-      id: 2,
-      image:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/bfc_phone.jpg",
-    },
-    {
-      id: 5,
-      video:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/bfc_vid.webm",
-    },
+    // { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
+    { id: 2, image: image5 },
+    // { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.webm" },
+    { id: 4, image: image7 },
   ];
 
   const columnThreeItems = [
-    {
-      id: 3,
-      video:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/dynr_vid.webm",
-    },
-    {
-      id: 6,
-      image:
-        process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/dynr_photo.jpg",
-    },
+    // { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.webm" },
+    // { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
+    { id: 6, image: image6 },
+    { id: 3, image: image3 },
   ];
 
   const renderWorkItem = (work, key) => (
-    <div
-      key={key}
-      className="work-item block group mb-12"
-      onMouseEnter={() => setHoveredIndex(work.id)}
-      onMouseLeave={() => setHoveredIndex(null)}
-    >
-      {/* <Link href={`/works/${work.id}`} className="block"> */}
-      <div className="relative overflow-hidden">
-        <div className="relative aspect-[4/5] bg-gray-200 overflow-hidden">
-          {work.video ? (
-            <video
-              src={work.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          ) : (
-            <Image
-              src={work.image}
-              alt="Work"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-          )}
-          <div
-            className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 ${
-              hoveredIndex === work.id ? "bg-opacity-10" : ""
-            }`}
-          ></div>
+    console.log(key),
+    (
+      <div
+        key={key}
+        className={`work-item block group mb-12`}
+        onMouseEnter={() => setHoveredIndex(work.id)}
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
+        {/* <Link href={`/works/${work.id}`} className="block"> */}
+        <div className="relative overflow-hidden">
+          <div className="relative aspect-[4/5]  overflow-hidden">
+            {work.video ? (
+              <video
+                src={work.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <Image
+                src={work.image}
+                alt="Work"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            )}
+            <div
+              className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 `}
+            ></div>
+          </div>
         </div>
+        {/* </Link> */}
       </div>
-      {/* </Link> */}
-    </div>
+    )
   );
 
-  const renderTickerColumn = (items, delayClass = "") => (
-    <div className={`ticker-column ${delayClass}`}>
+  const renderTickerColumn = (items) => (
+    <div className="ticker-column">
       <div className="ticker-track">
         {[...items, ...items].map((work, index) =>
           renderWorkItem({ ...work }, `${work.id}_${index}`)
@@ -348,9 +339,10 @@ export default function WorksSection() {
           className="hidden md:flex gap-8 overflow-hidden"
           style={{ height: "900px" }}
         >
-          {renderTickerColumn(columnOneItems, "delay-0")}
-          {renderTickerColumn(columnTwoItems, "delay-5")}
-          {renderTickerColumn(columnThreeItems, "delay-2")}
+          {renderTickerColumn(columnOneItems)}
+          {renderTickerColumn(columnTwoItems)}
+          {renderTickerColumn(columnThreeItems)}
+
         </div>
 
         {/* Mobile fallback */}
