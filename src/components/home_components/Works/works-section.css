@@ -1,4 +1,4 @@
-@keyframes scrollUp {
+/* @keyframes scrollUp {
   0% {
     transform: translateY(0);
   }
@@ -29,4 +29,40 @@
 .delay-5 .ticker-track {
   animation-delay: 5s;
 }
+ */
 
+ @keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.ticker-column {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 30s linear infinite;
+  will-change: transform;
+}
+
+/* Remove the animation delays */
+/* Instead, add different starting positions with margins */
+.ticker-column:nth-child(1) .ticker-track {
+  margin-top: 150px; /* Adjust these values as needed */
+}
+
+.ticker-column:nth-child(2) .ticker-track {
+  margin-top: 300px; /* Adjust these values as needed */
+}
+
+.ticker-column:nth-child(3) .ticker-track {
+  margin-top: 50px; /* Adjust these values as needed */
+}

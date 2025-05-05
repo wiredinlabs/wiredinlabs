@@ -8,7 +8,7 @@
 //   const [hoveredIndex, setHoveredIndex] = useState(null);
 //   const tickerRef = useRef(null);
 //   const animationRef = useRef();
-  
+
 //   // Create arrays with many duplicated items to ensure seamless scrolling
 //   const generateItems = (baseItems, columnId) => {
 //     // Create many copies to ensure we have enough content
@@ -40,7 +40,7 @@
 //     { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.mp4" },
 //     { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
 //   ];
-  
+
 //   // Generate many copies of each item with unique IDs
 //   const columnOneItems = generateItems(baseColumnOneItems, "col1");
 //   const columnTwoItems = generateItems(baseColumnTwoItems, "col2");
@@ -49,21 +49,21 @@
 //   // Animation logic with pure CSS variables for better performance
 //   useEffect(() => {
 //     if (!tickerRef.current) return;
-    
+
 //     const columns = tickerRef.current.querySelectorAll(".ticker-column");
-    
+
 //     // Set initial positions with CSS variables for smoother animation
 //     columns[0].style.setProperty('--scroll-pos', '0px');
 //     columns[1].style.setProperty('--scroll-pos', '-180px');
 //     columns[2].style.setProperty('--scroll-pos', '-90px');
-    
+
 //     // Store column data
 //     const columnData = [
 //       { element: columns[0], position: 0, baseHeight: 0 },
 //       { element: columns[1], position: -180, baseHeight: 0 },
 //       { element: columns[2], position: -90, baseHeight: 0 }
 //     ];
-    
+
 //     // Measure heights after initial render
 //     setTimeout(() => {
 //       columnData.forEach((data, i) => {
@@ -71,32 +71,31 @@
 //         const itemHeight = columns[i].querySelector('.work-item').offsetHeight * 2;
 //         data.baseHeight = itemHeight;
 //       });
-      
+
 //       // Animation speed
 //       const speed = 1.5;
-      
+
 //       const animate = () => {
 //         columnData.forEach(data => {
 //           // Update position
 //           data.position -= speed;
-          
+
 //           // If the position moves beyond a threshold, reset it outside the viewable area
 //           if (Math.abs(data.position) >= data.baseHeight * 100) {
 //             data.position += data.baseHeight * 100; // Move it back above the viewport
 //           }
-          
+
 //           // Apply position using CSS variable for smooth animation
 //           data.element.style.setProperty('--scroll-pos', `${data.position}px`);
 //         });
-      
+
 //         animationRef.current = requestAnimationFrame(animate);
 //       };
-      
-      
+
 //       // Start animation
 //       animationRef.current = requestAnimationFrame(animate);
 //     }, 100);
-    
+
 //     return () => {
 //       if (animationRef.current) {
 //         cancelAnimationFrame(animationRef.current);
@@ -106,7 +105,7 @@
 
 //   // Function to render a work item
 //   const renderWorkItem = (work) => (
-//     <div 
+//     <div
 //       key={work.id}
 //       className="work-item block group mb-12"
 //       onMouseEnter={() => setHoveredIndex(work.id)}
@@ -160,33 +159,32 @@
 //         </div>
 
 //         {/* Staggered three-column layout with ticker animation */}
-//         <div 
-//   ref={tickerRef} 
-//   className="hidden md:flex w-full gap-8 relative overflow-hidden" 
+//         <div
+//   ref={tickerRef}
+//   className="hidden md:flex w-full gap-8 relative overflow-hidden"
 //   style={{ height: "900px" }}
-// > 
-//   <div 
+// >
+//   <div
 //     className="w-[50%] ticker-column"
 //     style={{ transform: 'translateY(var(--scroll-pos))' }}
 //   >
 //     {columnOneItems.map(work => renderWorkItem(work))}
 //   </div>
 
-//   <div 
+//   <div
 //     className="w-[50%] ticker-column"
 //     style={{ transform: 'translateY(var(--scroll-pos))' }}
 //   >
 //     {columnTwoItems.map(work => renderWorkItem(work))}
 //   </div>
 
-//   <div 
+//   <div
 //     className="w-[50%] ticker-column"
 //     style={{ transform: 'translateY(var(--scroll-pos))' }}
 //   >
 //     {columnThreeItems.map(work => renderWorkItem(work))}
 //   </div>
 // </div>
-
 
 //         {/* Mobile layout - single column */}
 //         <div className="md:hidden">
@@ -230,14 +228,13 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import "./works-section.css"; // Import custom CSS for animation
-import image1 from './1.png';
-import image2 from './painting-dynr.png';
-import image3 from './1-watch.png';
-import image4 from './2-ticket.png';
-import image5 from './1-tag-qissa.png';
-import image6 from './phone-bfc.png';
-import image7 from './poster-bfc.png';
-
+import image1 from "./1.png";
+import image2 from "./painting-dynr.png";
+import image3 from "./1-watch.png";
+import image4 from "./2-ticket.png";
+import image5 from "./1-tag-qissa.png";
+import image6 from "./phone-bfc.png";
+import image7 from "./poster-bfc.png";
 
 export default function WorksSection() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -245,33 +242,34 @@ export default function WorksSection() {
   const columnOneItems = [
     // { id: 1, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/qissa_vid.webm" },
     { id: 4, image: image4 },
-    {id :1, image: image2},
+    { id: 1, image: image2 },
     // {id:4, image: image1}
   ];
 
   const columnTwoItems = [
     // { id: 2, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_phone.jpg" },
-    {id:2, image:image5},
+    { id: 2, image: image5 },
     // { id: 5, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/bfc_vid.webm" },
-    {id:4, image: image7}
+    { id: 4, image: image7 },
   ];
 
   const columnThreeItems = [
     // { id: 3, video: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_vid.webm" },
     // { id: 6, image: "https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/dynr_photo.jpg" },
-    {id: 6, image:image6},
-    {id : 3, image: image3}
+    { id: 6, image: image6 },
+    { id: 3, image: image3 },
   ];
 
   const renderWorkItem = (work, key) => (
-    <div
-      key={key}
-      className="work-item block group mb-12"
-      onMouseEnter={() => setHoveredIndex(work.id)}
-      onMouseLeave={() => setHoveredIndex(null)}
-    >
-
-      {/* <Link href={`/works/${work.id}`} className="block"> */}
+    console.log(key),
+    (
+      <div
+        key={key}
+        className={`work-item block group mb-12`}
+        onMouseEnter={() => setHoveredIndex(work.id)}
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
+        {/* <Link href={`/works/${work.id}`} className="block"> */}
         <div className="relative overflow-hidden">
           <div className="relative aspect-[4/5]  overflow-hidden">
             {work.video ? (
@@ -293,18 +291,17 @@ export default function WorksSection() {
               />
             )}
             <div
-              className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 ${
-                hoveredIndex === work.id ? "bg-opacity-10" : ""
-              }`}
+              className={`absolute inset-0 bg-[#CCFF00] bg-opacity-0 transition-all duration-300 `}
             ></div>
           </div>
         </div>
-      {/* </Link> */}
-    </div>
+        {/* </Link> */}
+      </div>
+    )
   );
 
-  const renderTickerColumn = (items, delayClass = "") => (
-    <div className={`ticker-column ${delayClass}`}>
+  const renderTickerColumn = (items) => (
+    <div className="ticker-column">
       <div className="ticker-track">
         {[...items, ...items].map((work, index) =>
           renderWorkItem({ ...work }, `${work.id}_${index}`)
@@ -320,21 +317,26 @@ export default function WorksSection() {
           <h2 className="text-5xl md:text-7xl font-bold mr-6 tracking-tighter">
             Our Works
           </h2>
-          <span className="text-6xl md:text-8xl font-bold text-[#E4ED05]">*</span>
+          <span className="text-6xl md:text-8xl font-bold text-[#E4ED05]">
+            *
+          </span>
           <div className="flex-grow h-px bg-gray-800 ml-8 hidden md:block"></div>
         </div>
 
         {/* Desktop ticker */}
-        <div className="hidden md:flex gap-8 overflow-hidden" style={{ height: "900px" }}>
-          {renderTickerColumn(columnOneItems, "delay-0")}
-          {renderTickerColumn(columnTwoItems, "delay-5")}
-          {renderTickerColumn(columnThreeItems, "delay-2")}
+        <div
+          className="hidden md:flex gap-8 overflow-hidden"
+          style={{ height: "900px" }}
+        >
+          {renderTickerColumn(columnOneItems)}
+          {renderTickerColumn(columnTwoItems)}
+          {renderTickerColumn(columnThreeItems)}
         </div>
 
         {/* Mobile fallback */}
         <div className="md:hidden">
-          {[...columnOneItems, ...columnTwoItems, ...columnThreeItems].map((work, i) =>
-            renderWorkItem(work, `m-${work.id}-${i}`)
+          {[...columnOneItems, ...columnTwoItems, ...columnThreeItems].map(
+            (work, i) => renderWorkItem(work, `m-${work.id}-${i}`)
           )}
         </div>
 
