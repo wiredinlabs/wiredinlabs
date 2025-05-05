@@ -38,7 +38,7 @@ export default function Loader({ onFinish }) {
 
         <div className="text-center">
         <img
-            src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/glowing_star.png"
+            src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/glowing_star.png`}
             className="w-24 h-24 mb-6 mx-auto animate-spin-slow"
             priority="true"
         />
