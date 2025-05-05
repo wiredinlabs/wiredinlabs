@@ -11,6 +11,15 @@ const NavBar = () => {
 
   useEffect(() => {
     setIsVisible(true); // Ensure navbar resets when route changes
+    
+    // Update active section based on current path
+    if (pathname === "/") {
+      setActiveSection("/");
+    } else if (pathname.includes("/blog")) {
+      setActiveSection("#blog");
+    } else {
+      setActiveSection(""); // No section active for other pages
+    }
   }, [pathname]);
   
   const [activeSection, setActiveSection] = useState("/");
@@ -19,6 +28,11 @@ const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
+    // Only handle scroll-based section detection on the homepage
+    if (pathname !== "/") {
+      return;
+    }
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const servicesSection = document.getElementById("services");
@@ -51,7 +65,7 @@ const NavBar = () => {
 
       setLastScrollY(currentScrollY);
 
-      // Update active section based on viewport
+      // Update active section based on viewport - only on homepage
       const sections = [
         { id: "/", ref: document.getElementById("about") },
         { id: "#services", ref: document.getElementById("services") },
@@ -73,7 +87,7 @@ const NavBar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, pathname]);
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
@@ -82,24 +96,39 @@ const NavBar = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  
+  // Function to determine if a link should be active
+  const isLinkActive = (linkPath) => {
+    // For homepage sections
+    if (pathname === "/" && activeSection === linkPath) {
+      return true;
+    }
+    
+    // For blog pages
+    if (linkPath === "#blog" && pathname.includes("/blog")) {
+      return true;
+    }
+    
+    return false;
+  };
 
   const NavLinks = ({ mobile = false }) => (
     <>
       <Link href="/" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "/"}>About</AnimatedCircle>
+        <AnimatedCircle isActive={isLinkActive("/")}>About</AnimatedCircle>
       </Link>
       <Link href="/#services" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "#services"}>
+        <AnimatedCircle isActive={isLinkActive("#services")}>
           Services
         </AnimatedCircle>
       </Link>
       <Link href="/#works" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "#works"}>
+        <AnimatedCircle isActive={isLinkActive("#works")}>
           Works
         </AnimatedCircle>
       </Link>
       <Link href="/#blog" onClick={mobile ? closeSidebar : undefined}>
-        <AnimatedCircle isActive={activeSection === "#blog"}>
+        <AnimatedCircle isActive={isLinkActive("#blog")}>
           Blog
         </AnimatedCircle>
       </Link>
@@ -118,7 +147,7 @@ const NavBar = () => {
           <div className="md:w-auto w-full flex md:justify-start justify-center">
             <Link href="/">
               <Image
-                src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/wired_in_labs_logo.png"
+                src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/wired_in_labs_logo.png`}
                 alt="wired_in_labs_logo"
                 width={89}
                 height={89}

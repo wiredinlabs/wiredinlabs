@@ -17,11 +17,11 @@ export const metadata = {
     title: "Why Wired-In Labs?",
     description:
       "Explore how Wired-In Labs was born out of passion for innovation, design, and creative coding.",
-    url: "https://yourdomain.com/blog/why-wired-in-labs",
+    url: "/blog/why-wired-in-labs",
     siteName: "Wired-In Labs",
     images: [
       {
-        url: "https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog1-cover.jpg",
+        url: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog1-cover.jpg",
         width: 1200,
         height: 630,
         alt: "Wired-In Labs Blog Cover Image",
@@ -35,7 +35,7 @@ export const metadata = {
     title: "Why Wired-In Labs?",
     description:
       "Discover how Wired-In Labs blends creativity and code to redefine web experiences.",
-    images: ["https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog1-cover.jpg"],
+    images: [process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog1-cover.jpg"],
   },
 };
 
@@ -46,7 +46,7 @@ export default function Blog1() {
     <div className="bg-black text-white pt-36">
       <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
         <Image
-          src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog1.png"
+          src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/blog1.png`}
           alt="Abstract art symbolizing creativity and technology at Wired-In Labs"
           fill
           loading="lazy"

@@ -17,11 +17,11 @@ export const metadata = {
     title: "Design Trends That Will Be Defining 2025",
     description:
       "Explore how AI, mixed reality, sustainability, and motion design are shaping the future of digital experiences.",
-    url: "https://yourdomain.com/blog/design-trends-2025",
+    url: "/blog/design-trends-2025",
     siteName: "Wired-In Labs",
     images: [
       {
-        url: "https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog2-cover.jpg",
+        url: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog2-cover.jpg",
         width: 1200,
         height: 630,
         alt: "2025 Design Trends Cover Image",
@@ -35,7 +35,7 @@ export const metadata = {
     title: "Design Trends That Will Be Defining 2025",
     description:
       "From AI-driven creativity to nostalgic aesthetics, discover the top design trends shaping the digital world in 2025.",
-    images: ["https://yourdomain.comhttps://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog2-cover.jpg"],
+    images: [process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog2-cover.jpg"],
   },
 };
 
@@ -46,7 +46,7 @@ export default function Blog2() {
     <div className="bg-black text-white pt-36">
       <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
         <Image
-          src="https://pub-2c663c3432e84955b66e1291428594d0.r2.dev/images/blog2.png"
+          src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/blog2.png`}
           alt="Futuristic digital design elements representing 2025 trends"
           fill
           loading="lazy"
