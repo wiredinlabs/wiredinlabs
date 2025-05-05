@@ -12,13 +12,16 @@ export default function WorksSection() {
     { id: 4, image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK + `images/2-ticket.png` },
     {
       id: 1,
+
       image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK + `images/painting-dynr.png`,
+
     },
   ];
 
   const columnTwoItems = [
     {
       id: 2,
+
       image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK + `images/1-tag-qissa.png`,
     },
     {
@@ -29,8 +32,10 @@ export default function WorksSection() {
 
   const columnThreeItems = [
     {
+
       id: 6,
       image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK + `images/phone-bfc.png`,
+
     },
     { id: 3, image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK + `images/1-watch.png` },
   ];
