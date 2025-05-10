@@ -41,7 +41,7 @@ export default function WorksSection() {
   ];
 
   const renderWorkItem = (work, key) => (
-    console.log(key),
+    // console.log(key),
     (
       <div
         key={key}
