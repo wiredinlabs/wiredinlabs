@@ -17,9 +17,9 @@ export default function ClientLayout({ children }) {
     <Loader onFinish={() => setLoading(false)} />
   ) : (
     <>
-      <NavBar />
+      {/* <NavBar />
       {children}
-      <ContactUsSection />
+      <ContactUsSection /> */}
     </>
   );
 }
