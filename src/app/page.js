@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { useState } from "react";
 import AboutSection from "@/components/home_components/About/AboutSection";
 import ServicesSection from "@/components/home_components/Services/ServicesSection";
 import WorksSection from "@/components/home_components/Works/WorksSection";
@@ -9,13 +9,15 @@ import BlogsSection from "@/components/home_components/Blogs/BlogsSection";
 import Loader from "@/components/loader";
 
 export default function Home() {
+  const [showLoader, setShowLoader] = useState(true);
 
   return (
     <div className="flex flex-col w-full min-h-screen font-[family-name:var(--font-geist-sans)] mt-[10vh]">
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-inherit transition-opacity duration-500">
-        <Loader />
-      </div>
+      {showLoader && (
+        <Loader onFinish={() => setShowLoader(false)} />
+      )}
 
+      {/* Page content shows even if loader is fading out */}
       <AboutSection />
       <ServicesSection />
       <WorksSection />
