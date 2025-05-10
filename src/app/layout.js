@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ClientLayout from './ClientLayout';
+import ContactUsSection from '@/components/home_components/ContactUs/ContactUsSection';
+import NavBar from '@/components/layout_components/NavBar/NavBar';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -17,7 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased dotted-bg`}>
-        <ClientLayout>{children}</ClientLayout>
+        {/* <ClientLayout>{children}</ClientLayout> */}
+        <NavBar />
+      {children}
+      <ContactUsSection />
       </body>
     </html>
   );
