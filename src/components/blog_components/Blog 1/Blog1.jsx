@@ -14,7 +14,7 @@ export const metadata = {
   ],
   authors: [{ name: "Wired-In Labs" }],
   openGraph: {
-    title: "Why Wired-In Labs?",
+    title: "Why Should You Choose Wired In Labs?",
     description:
       "Explore how Wired-In Labs was born out of passion for innovation, design, and creative coding.",
     url: "/blog/why-wired-in-labs",
@@ -44,21 +44,10 @@ export const dynamic = "force-static";
 export default function Blog1() {
   return (
     <div className="bg-black text-white pt-36">
-      <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/blog1.png`}
-          alt="Abstract art symbolizing creativity and technology at Wired-In Labs"
-          fill
-          loading="lazy"
-          className="object-cover"
-        />
-      </div>
-
-      {/* Blog Content */}
       <div className="max-w-5xl mx-auto px-4 pt-12">
         <main>
           <div className="text-sm text-gray-400 uppercase tracking-wider mb-4">Our Story</div>
-          <h1 className="text-5xl font-bold mb-6 leading-tight">Why Wired-In Labs?</h1>
+          <h1 className="text-5xl font-bold mb-6 leading-tight">Why Should You Choose Wired In Labs?</h1>
 
           <div className="flex items-center mb-8 text-sm text-gray-400">
           <div>March 24, 2025</div>
