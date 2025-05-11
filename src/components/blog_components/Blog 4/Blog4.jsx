@@ -46,16 +46,6 @@ export const dynamic = "force-static";
 export default function Blog4() {
   return (
     <div className="bg-black text-white pt-36">
-      <div className="relative w-full h-[15vh] md:h-[25vh] lg:h-[35vh]">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/blog4.png`}
-          alt="Futuristic digital design elements representing 2025 trends"
-          fill
-          loading="lazy"
-          className="object-cover"
-        />
-      </div>
-      
       <div>
         <div className="max-w-5xl mx-auto px-4 pt-12">
           <main>

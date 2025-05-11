@@ -11,43 +11,48 @@ import Link from "next/link";
 const blogs = [
   {
     id: 1,
-    title: "Why Wired In Labs?",
+    title: "Why Should You Choose Wired In Labs?",
     description:
-      "Wired-In Labs blends creativity with technology, crafting immersive digital experiences beyond templates. From sleek web design to interactive coding, we help brands stand out with innovation-driven solutions. Let’s build something extraordinary!",
-    image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog1.png",
+      "About Us",
+    image: "/images/blog1.svg",
     link: "/blog/Why-Wired-In-Labs",
+    color: "#EFF371",
   },
   {
     id: 2,
-    title: "Every Business Needs a Website",
+    title: "Why Every Business Needs a Website in 2025",
     description:
-      "A strong website isn’t optional anymore—it’s essential. Discover how a professional site builds trust, boosts visibility, and fuels growth for every business in 2025.",
-    image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog5.png",
+      "Business",
+    image: "images/blog2.svg",
     link: "/blog/Why-Every-Business-Needs-A-Website",
+    color: "#E6BCCA",
   },
   {
     id: 3,
-    title: "What Makes a Good Website?",
+    title: "What Makes a Good Website? Key Elements for Success",
     description:
-      "A great website combines design, speed, security, and content. Key factors include easy navigation, mobile-friendliness, SEO, fast loading, and strong CTAs. Optimize for success and stand out online!",
-    image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog3.png",
+      "Development",
+    image: "/images/blog3.svg",
     link: "/blog/What-Makes-A-Good-Website",
+    color: "#BCE7FD",
   },
   {
     id: 4,
-    title: "Design Trends Defining 2025",
+    title: "Design Trends That Will Be Defining 2025",
     description:
-      "Embrace 2025’s bold design trends! From AI creativity to mixed reality, Neo-Brutalism, and hyper-personalized UX—explore sustainability, kinetic typography, and dark mode-first design. Stay ahead!",
-    image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog2.png",
+      "Design",
+    image: "images/blog4.svg",
     link: "/blog/Design-Trends-Defining-2025",
+    color: "#CEEC97",
   },
   {
     id: 5,
-    title: "Web Design for Business",
+    title: "Boosting Engagement with Creative Web Design",
     description:
-      "Creative web design and compelling content enhance credibility, user experience, and conversions. Optimize your site with intuitive navigation, storytelling, and SEO for a stronger online presence!",
-    image: process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK+"images/blog4.png",
+      "Design, Business",
+    image: "images/blog5.svg",
     link: "/blog/Web-Design-For-Business",
+    color: "#E27F55",
   }
 ];
 
@@ -88,22 +93,22 @@ const BlogsSection = () => {
             freeMode={{ enabled: false }}
             breakpoints={{
               640: {
-                slidesPerView: 1.5,
+                slidesPerView: 2.25,
                 spaceBetween: 15,
                 allowTouchMove: true,
               },
               768: {
-                slidesPerView: 1.5,
+                slidesPerView: 2.25,
                 spaceBetween: 20,
                 allowTouchMove: true,
               },
               1024: {
-                slidesPerView: 2.5,
+                slidesPerView: 3.25,
                 spaceBetween: 20,
                 allowTouchMove: true,
               },
               1280: {
-                slidesPerView: 3.5,
+                slidesPerView: 4.25,
                 spaceBetween: 25,
                 allowTouchMove: false,
               },
@@ -113,40 +118,50 @@ const BlogsSection = () => {
             {blogs.map((blog) => (
               <SwiperSlide key={blog.id} className="overflow-visible">
                 <Link href={blog.link}>
-                  <div
-                    // onClick={() => router.push(blog.link)}
-                    onMouseEnter={(e) =>
-                      e.target.closest(".swiper").swiper.autoplay.stop()
-                    }
-                    onMouseLeave={(e) =>
-                      e.target.closest(".swiper").swiper.autoplay.start()
-                    }
-                    className="cursor-pointer mt-2 bg-white text-black shadow-lg transition-transform transform hover:scale-105 h-[450px] sm:h-[500px] flex-shrink-0 relative overflow-hidden"
-                  >
-                    <div className="p-2 bg-white">
-                      <img
+                <div
+                  onMouseEnter={(e) => {
+                    e.target.closest(".swiper").swiper.autoplay.stop();
+                    e.currentTarget.style.boxShadow = `0 0 15px 5px ${blog.color}`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.closest(".swiper").swiper.autoplay.start();
+                    e.currentTarget.style.boxShadow = `0 0 0 rgba(0,0,0,0)`;
+                  }}
+                  className="cursor-pointer text-black rounded-xl p-6 shadow-md transition-transform transform hover:scale-105 h-[420px] flex flex-col justify-between"
+                  style={{
+                    backgroundColor: blog.color,
+                    boxShadow: "0 0 0 rgba(0,0,0,0)",
+                    transition: "box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out",
+                  }}
+                >
+                  {/* Top Container with both images aligned */}
+                  <div className="flex justify-between items-start mb-4">
+                    {/* Blog image */}
+                    <img
                         src={blog.image}
-                        alt={blog.title}
-                        className="w-full h-[250px] object-cover"
+                        alt="Blog Icon"
+                        className="w-36 h-36 object-cover rounded-md"
                       />
-                    </div>
-                    <div className="p-4 flex flex-col h-[60%]">
-                      <h3 className="text-md sm:text-xl md:text-md lg:text-md font-bold h-[10%] flex items-center tracking-tighter mb-2">
-                        {blog.title}
-                      </h3>
-                      <p className="text-xs md:text-sm opacity-70 h-[75%] overflow-hidden tracking-tighter italic">
-                        {blog.description}
-                      </p>
-                    </div>
-                    <div className="absolute bottom-4 right-4 w-6 md:w-8 h-6 md:h-8">
-                      <img
+
+                    {/* Small image */}
+                    <img
                         src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/small_image.png`}
-                        alt="small icon"
-                        className="w-full object-cover"
+                        alt="Blog Icon"
+                        className="w-8 h-8 object-contain"
                       />
-                    </div>
                   </div>
-                </Link>
+
+                  {/* Title */}
+                  <div className="mt-10">
+                    <h3 className="text-xl sm:text-2xl font-semibold tracking-tighter leading-tight line-clamp-4 min-h-[8rem]">
+                      {blog.title}
+                    </h3>
+                    <p className="text-sm sm:text-base leading-snug line-clamp-4">
+                      {blog.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
               </SwiperSlide>
             ))}
           </Swiper>
