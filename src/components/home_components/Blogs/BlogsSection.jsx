@@ -62,17 +62,17 @@ const BlogsSection = () => {
   return (
     <div
       id="blog"
-      className="min-h-screen pt-[15vh] bg-black text-white flex flex-col items-center relative w-full"
+      className="min-h-screen pt-[5vh] bg-black text-white flex flex-col items-center relative w-full"
     >
       {/* Title */}
-      <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 sm:mb-8 w-full px-5 sm:px-8">
+      <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 sm:mb-8 w-[90%] mx-auto">
         Blogs<span className="text-[#E4ED05]">.</span>
       </h2>
 
       <div className="relative w-full flex justify-center">
         <div className="w-[92%] mx-auto relative">
           <Swiper
-            slidesPerView={1.2}
+            slidesPerView={1.1}
             spaceBetween={15}
             grabCursor={true}
             touchEventsTarget="wrapper"
@@ -93,22 +93,22 @@ const BlogsSection = () => {
             freeMode={{ enabled: false }}
             breakpoints={{
               640: {
-                slidesPerView: 2.25,
+                slidesPerView: 2,
                 spaceBetween: 15,
                 allowTouchMove: true,
               },
               768: {
-                slidesPerView: 2.25,
+                slidesPerView: 2,
                 spaceBetween: 20,
                 allowTouchMove: true,
               },
               1024: {
-                slidesPerView: 3.25,
+                slidesPerView: 3,
                 spaceBetween: 20,
                 allowTouchMove: true,
               },
               1280: {
-                slidesPerView: 4.25,
+                slidesPerView: 4,
                 spaceBetween: 25,
                 allowTouchMove: false,
               },
