@@ -151,6 +151,7 @@ const NavBar = () => {
                 alt="wired_in_labs_logo"
                 width={89}
                 height={89}
+                loading="eager"
               />
             </Link>
           </div>

@@ -141,6 +141,7 @@ const BlogsSection = () => {
                         src={blog.image}
                         alt="Blog Icon"
                         className="w-36 h-36 object-cover rounded-md"
+                        loading="lazy"
                       />
 
                     {/* Small image */}
@@ -148,6 +149,7 @@ const BlogsSection = () => {
                         src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/small_image.png`}
                         alt="Blog Icon"
                         className="w-8 h-8 object-contain"
+                        loading="lazy"
                       />
                   </div>
 
@@ -170,6 +172,7 @@ const BlogsSection = () => {
               src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/chevron-left.png`}
               alt="Previous"
               className="w-4 h-4 sm:w-8 sm:h-8"
+              loading="lazy"
             />
           </div>
           <div className="absolute top-1/2 right-[-40px] z-10 transform -translate-y-1/2 cursor-pointer swiper-button-next hidden sm:flex">
@@ -177,6 +180,7 @@ const BlogsSection = () => {
               src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/chevron-right.png`}
               alt="Next"
               className="w-4 h-4 sm:w-8 sm:h-8"
+              loading="lazy"
             />
           </div>
         </div>
