@@ -12,9 +12,9 @@ const ServicesSection = () => {
 
   const services = [
     "UX Research",
-    "Web Development",
+    "Web Dev",
     "Branding",
-    "App Development",
+    "App Dev",
     "UI Design",
   ];
 
@@ -128,7 +128,7 @@ const ServicesSection = () => {
                     }`}
                     style={{ top: "-37px", left: "-44px" }}
                   > */}
-                    <svg
+                    {/* <svg
                       className={`three-lines absolute ${
                         activeService === service ? "block" : "hidden"
                       }`}
@@ -155,7 +155,7 @@ const ServicesSection = () => {
                         d="M61.1264 2.63576C61.4264 8.65176 61.7259 14.6678 62.0259 20.6848C62.0259 22.0628 63.2264 23.1268 64.6264 23.0598C66.0264 22.9918 67.0259 21.8188 67.0259 20.4398C66.7259 14.4138 66.4264 8.38876 66.1264 2.36376C66.0264 0.985757 64.8262 -0.0712432 63.4262 0.00375683C62.1262 0.0787568 61.0264 1.25876 61.1264 2.63576Z"
                         fill="black"
                       />
-                    </svg>
+                    </svg> */}
                   {/* </div> */}
                 </div>
               ))}
