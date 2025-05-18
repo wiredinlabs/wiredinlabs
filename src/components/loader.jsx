@@ -3,16 +3,20 @@
 import { useEffect, useState } from 'react';
 
 export default function Loader({ onFinish }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
-  const [fullyHidden, setFullyHidden] = useState(false); // hide completely after fade-out
+  const [fullyHidden, setFullyHidden] = useState(false);
 
+  // Start progress animation only after image is loaded
   useEffect(() => {
+    if (!imageLoaded) return;
+
     const interval = setInterval(() => {
       setProgress((p) => {
         if (p >= 100) {
           clearInterval(interval);
-          setTimeout(() => setExiting(true), 500); // slight pause at 100%
+          setTimeout(() => setExiting(true), 500); // pause before fade-out
           return 100;
         }
         return p + 2;
@@ -20,15 +24,15 @@ export default function Loader({ onFinish }) {
     }, 40);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [imageLoaded]);
 
-  // After fade-out completes, hide loader and call onFinish
+  // Handle fade-out and cleanup
   useEffect(() => {
     if (exiting) {
       const timer = setTimeout(() => {
         setFullyHidden(true);
         onFinish();
-      }, 500); // wait for fade-out animation to finish
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [exiting, onFinish]);
@@ -43,8 +47,9 @@ export default function Loader({ onFinish }) {
       <div className="text-center">
         <img
           src={`${process.env.NEXT_PUBLIC_CDN_PUBLIC_LINK}images/glowing_star.png`}
-          className="w-24 h-24 mb-6 mx-auto animate-spin-slow"
+          className="w-24 h-24 mb-6 mx-auto animate-spin-slow opacity-100"
           alt="Loading..."
+          onLoad={() => setImageLoaded(true)}
         />
         <div className="w-72 h-2 bg-gray-600 rounded mx-auto overflow-hidden">
           <div
