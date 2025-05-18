@@ -122,7 +122,7 @@ const TermsAndConditions = () => {
             </p>
         
         <ul className="list-disc list-inside space-y-2 mb-4">
-          <li>By email: <a href="mailto:contact.wiredinlabs@gmail.com" className="text-blue-600">contact.wiredinlabs@gmail.com</a></li>
+          <li>By email: <a href="mailto:contact.wiredinlabs@gmail.com" className="text-blue-600">contact@wiredinlabs.com</a></li>
           <li>By visiting: <a href="https://www.wiredinlabs.com/#contact" className="text-blue-600">wiredinlabs.com/contact</a></li>
         </ul>
       </div>
