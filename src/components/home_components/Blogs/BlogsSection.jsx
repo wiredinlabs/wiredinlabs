@@ -25,7 +25,7 @@ const blogs = [
       "Business",
     image: "images/blog2.svg",
     link: "/blog/Why-Every-Business-Needs-A-Website",
-    color: "#E6BCCA",
+    color: "#F3B391",
   },
   {
     id: 3,
