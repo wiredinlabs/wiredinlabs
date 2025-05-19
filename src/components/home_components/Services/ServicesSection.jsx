@@ -117,7 +117,7 @@ const ServicesSection = () => {
                     leading-none font-bold transition-all duration-300 relative
                     ${
                       activeService === service
-                        ? "text-black text-[38px] sm:text-[70px] md:text-[85px] lg:text-[145px] 2xl:text-[160px] font-bold tracking-tighter opacity-100"
+                        ? "text-black text-[50px] sm:text-[85px] md:text-[100px] lg:text-[180px] 2xl:text-[220px] font-bold tracking-tighter opacity-100"
                         : "text-black/30 text-[30px] sm:text-[40px] md:text-[60px] lg:text-[70px] font-bold tracking-tighter opacity-70"
                     }
                   `}
