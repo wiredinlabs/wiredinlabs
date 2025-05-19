@@ -11,11 +11,12 @@ const ServicesSection = () => {
   const contentRef = useRef(null);
 
   const services = [
-    "UX Research",
-    "Web Development",
+    "Design",
+    "Development",
     "Branding",
-    "App Development",
-    "UI Design",
+    "Creative Audit",
+    "UX Research",
+
   ];
 
   useEffect(() => {
